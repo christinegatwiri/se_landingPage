@@ -1,0 +1,157 @@
+.mainheader{
+    padding-top: 12.5rem;
+    padding-bottom: 10rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/img/startup.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.mainheading{
+    text-align: left;
+    width: 40%;
+    float: left;    
+}
+
+.ctaform{
+    text-align: center;
+    padding-left: 880px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+input[type=text]{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+}
+input[type=email]{
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+}
+.ctaform button{
+    margin-top: 5px;
+    padding-top: 80px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contactus input[type=text]{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 33%;
+}
+
+.contactus input[type=email]{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 33%;
+}
+
+.contactus button{
+    margin-top: 5px;
+    padding-top: 80px;
+    width: 33%;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .mainheading {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 20px;
+        padding:5px;
+    }
+    .ctaform{
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .ctaform input[type=text]{
+        margin-top: 30px;
+        width: 90%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    .ctaform input[type=email]{
+        margin-top: 5px;
+        padding-top: 80px;
+        width: 90%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    .ctaform button{
+        margin-top: 5px;
+        padding-top: 80px;
+        width: 90%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .contactus{
+        padding:9px;
+    }
+    .contactus input[type=text]{
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .contactus input[type=email]{
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .contactus button{
+        margin-top: 5px;
+        padding-top: 80px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    }
+
+
+    @media (min-width: 768px) {
+        header.mainheader {
+        padding-top: 17.5rem;
+        padding-bottom: 16.9rem;
+        text-align: center;
+        /* display: flex; */
+    }
+
+    header.mainheader .mainheader-leftside {
+        float: left;
+    }
+
+    header.mainheader .mainheader-rightside {
+        float: right;
+    }
+
+    header.mainheader .mainheader-subheading {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+        margin-bottom: 2rem;
+    }
+    header.mainheader .mainheader-heading {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        margin-bottom: 4rem;
+    }
+    }
