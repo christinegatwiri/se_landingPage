@@ -1,0 +1,42 @@
+/* Float four columns side by side */
+.testimonialcolumn {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .testimonialrow {margin: 0 0;}
+  
+  /* Clear floats after the columns */
+  .testimonialrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .testimonialpic img {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 20px;
+    border: 0.5rem solid #cccccc;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .testimonialcolumn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      padding-top: 80px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .testimonialcard {
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    width: 98%;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+  }
