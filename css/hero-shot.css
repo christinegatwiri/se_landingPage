@@ -1,6 +1,7 @@
+/* mobile view heading */
 .mainheader{
-    padding-top: 12.5rem;
-    padding-bottom: 10rem;
+    padding-top: 16.5rem;
+    padding-bottom: 13rem;
     text-align: center;
     color: #fff;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/img/startup.jpg");
@@ -22,6 +23,8 @@
     margin-left: auto;
     margin-right: 0;
 }
+.desktop-content {display: block;}
+.mobile-content {display: none;}
 
 input[type=text]{
     border-radius: 5px;
@@ -48,20 +51,20 @@ input[type=email]{
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 5px;
-    width: 33%;
+    width: 25%;
 }
 
 .contactus input[type=email]{
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 5px;
-    width: 33%;
+    width: 25%;
 }
 
 .contactus button{
     margin-top: 5px;
     padding-top: 80px;
-    width: 33%;
+    width: 25%;
     border-radius: 5px;
     padding: 5px;
 }
@@ -73,13 +76,27 @@ input[type=email]{
         padding-bottom: 20px;
         padding:5px;
     }
+    /* display different content for mobile */
+    .desktop-content {display: none;}
+    .mobile-content {
+        display: block;
+        padding-bottom: 30px;
+    }
+
+    .mainheading h2{
+        font-size: x-large;
+    }
+    .mainheading p{
+        font-size:large
+    }
+
     .ctaform{
         text-align: center;
-        padding-left: 0;
+        padding-left: 5px;
     }
 
     .ctaform input[type=text]{
-        width: 90%;
+        width: 80%;
         border-radius: 5px;
         border: 1px solid #ccc;
         padding: 5px;
@@ -87,7 +104,7 @@ input[type=email]{
     .ctaform input[type=email]{
         margin-top: 5px;
         padding-top: 80px;
-        width: 90%;
+        width: 80%;
         border-radius: 5px;
         border: 1px solid #ccc;
         padding: 5px;
@@ -95,12 +112,12 @@ input[type=email]{
     .ctaform button{
         margin-top: 5px;
         padding-top: 80px;
-        width: 90%;
+        width: 80%;
         border-radius: 5px;
         padding: 5px;
     }
     .contactus{
-        padding:9px;
+        padding:15px;
     }
     .contactus input[type=text]{
         border-radius: 5px;
