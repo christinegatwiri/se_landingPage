@@ -1,6 +1,6 @@
 /* mobile view heading */
 .mainheader{
-    padding-top: 16.5rem;
+    padding-top: 13.5rem;
     padding-bottom: 13rem;
     text-align: center;
     color: #fff;
@@ -13,7 +13,7 @@
 
 .mainheading{
     text-align: left;
-    width: 40%;
+    width: 60%;
     float: left;    
 }
 
@@ -25,6 +25,9 @@
 }
 .desktop-content {display: block;}
 .mobile-content {display: none;}
+.mobile-content-heading {
+    display: none;
+}
 
 input[type=text]{
     border-radius: 5px;
@@ -44,14 +47,17 @@ input[type=email]{
     padding-top: 80px;
     width: 100%;
     border-radius: 5px;
-    padding: 5px;
+    background-color: #FF931E;
+    border: none;
+    padding: 6px;
 }
 
 .contactus input[type=text]{
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 10px;
     width: 25%;
+    margin-top: 5px;
 }
 
 .contactus input[type=email]{
@@ -80,7 +86,11 @@ input[type=email]{
     .desktop-content {display: none;}
     .mobile-content {
         display: block;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
+    }
+    .mobile-content-heading {
+        display: block;
+        padding-bottom: 10px;
     }
 
     .mainheading h2{
@@ -100,6 +110,8 @@ input[type=email]{
         border-radius: 5px;
         border: 1px solid #ccc;
         padding: 5px;
+        margin-top: 5px;
+        padding-top: 80px;
     }
     .ctaform input[type=email]{
         margin-top: 5px;
@@ -145,7 +157,7 @@ input[type=email]{
 
     @media (min-width: 768px) {
         header.mainheader {
-        padding-top: 17.5rem;
+        padding-top: 15.5rem;
         padding-bottom: 16.9rem;
         text-align: center;
         /* display: flex; */
