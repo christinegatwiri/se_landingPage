@@ -1,6 +1,6 @@
 /* mobile view heading */
 .mainheader{
-    padding-top: 13.5rem;
+    padding-top: 17.5rem;
     padding-bottom: 13rem;
     text-align: center;
     color: #fff;
@@ -34,6 +34,7 @@ input[type=text]{
     border: 1px solid #ccc;
     padding: 5px;
     width: 100%;
+    margin-top: 5px;
 }
 input[type=email]{
     margin-top: 5px;
@@ -63,8 +64,9 @@ input[type=email]{
 .contactus input[type=email]{
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 10px;
     width: 25%;
+    margin-top: 5px;
 }
 
 .contactus button{
@@ -72,7 +74,7 @@ input[type=email]{
     padding-top: 80px;
     width: 25%;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
 }
 /* Responsive */
 @media screen and (max-width: 600px) {
@@ -111,7 +113,6 @@ input[type=email]{
         border: 1px solid #ccc;
         padding: 5px;
         margin-top: 5px;
-        padding-top: 80px;
     }
     .ctaform input[type=email]{
         margin-top: 5px;
