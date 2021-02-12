@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Latest compiled and minified CSS -->
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/how-it-works.css" rel="stylesheet" />
@@ -32,23 +33,31 @@
         <header class="mainheader">
             <div class="container">
                 <div class="mainheading">
-                    <h1 style="color:#FF931E;padding-top: 40px;" class="desktop-content">Start. Execute. Launch Your Startup</h1>
-                    <h2 class="mobile-content-heading" style="font-size: xx-large;color:#FF931E;">Start. Execute. Launch your Startup!</h2>
+                    <h1 style="color:#FF931E;padding-top: 40px;" class="desktop-content">Start. Execute. Launch.</h1>
+                    <h2 class="mobile-content-heading" style="font-size: xx-large;color:#FF931E;">Start. Execute. Launch.</h2>
                     <p class="desktop-content">The Systematic Entrepreneurship platform provides you with a step by step process for developing
-                      your idea, along with community mentors and content to help you stay on track. Avoid unnecessary mistakes.
+                      your idea, along with community, mentors and content to help you stay on track. Avoid unnecessary mistakes.
                     </p>
                     <p class="mobile-content">A platform that provides entrepreneurs with the tools and resources along 
                         with community and mentors to always keep them moving.
                     </p>
-
                 </div>
                 <div>
                     <form class="ctaform" data-netlify="true">
                         <h4 class="desktop-content" style="color:#FF931E;"><b>Join the waiting list</b></h4>
                         <h5 class="mobile-content" style="color:#FF931E;padding-top: 20px;"><b>Join the waiting list</b></h5>
-                        <input type="text" name="First Name" placeholder="First Name">
-                        <input type="text" name="Last Name" placeholder="Last Name">
-                        <input type="text" name="Phone Number" placeholder="Phone Number">
+                        <div class="desktop-content" >
+                            <div style="display: flex;flex-direction: row;">
+                                <input style="display: block;margin-right: 1%;" type="text" name="First Name" placeholder="First Name">
+                                <input style="display: block;" type="text" name="Last Name" placeholder="Last Name">
+                            </div>
+                            <input style="width: 100%;" type="text" name="Phone Number" placeholder="Phone Number">
+                        </div>
+                        <div class="mobile-content" >
+                            <input type="text" name="First Name" placeholder="First Name">
+                            <input type="text" name="Last Name" placeholder="Last Name">
+                            <input style="margin-bottom: -18px;" type="text" name="Phone Number" placeholder="Phone Number">
+                        </div>
                         <input type="email" name="Email Address" placeholder="Email address">
                         <button type="submit"><b>Submit</b></button>
                     </form>
@@ -59,7 +68,7 @@
         <!-- responsive flaoting cards -->
         <!-- floating cards -->
         <section class="page-section" id="portfolio">
-            <div class="container" style="margin-top: -200px;" >
+            <div class="container" style="margin-top: -190px;" >
                 <div class="outlookrow">
                     <div class="outlookcolumn">
                       <div class="outlookcard outlookpic">
@@ -236,20 +245,86 @@
           
         <!-- Contact-->
         <section class="page-section" id="contact">
-            <div class="container">
+            <div id="original-contact" class="container">
                 <div class="text-center">
                     <h3 class="section-heading">Join the waiting list</h3>
                     <br/>
                 </div>
-                <form class="text-center contactus" data-netlify="true">
+                <form class="text-center contactus">
                     <div style="height: 100%;display: block;">
                         <input type="text" name="CTA First Name" placeholder="First name">
                         <input type="text" name="CTA Last Name" placeholder="Last name"><br/>
                         <input type="text" name="CTA Phone Number" placeholder="Phone Number">
                         <input type="email" name="CTA Email address" placeholder="Email address"><br/>
-                        <button style="background-color: #FF931E;border: none;" type="submit"><b>Join Us</b></button>
+                        <input type="button" value="Join Us" id="contact-btn" onclick="switchVisible();" style="background-color: #FF931E;border: none;">
                     </div>
                 </form>
+            </div>
+            <div id="new-survey" class="container">
+                <div class="text-center">
+                    <h3 class="section-heading">Before you go...</h3>
+                    <br/>
+                </div>
+                    <div>
+                        <form class="contactus survey" data-netlify="true">
+                            <p >Help us create a better platform for you by answering the following questions</p>
+                            <div style="height: 100%;display: block;">
+                                <p ><b>Do you currently have a startup?</b></p>
+                                <input type="radio" name="yes" id="yes" value="Yes">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" name="no" id="no" value="No">
+                                <label for="no"> No</label><br>
+                                <hr/>
+                                <p><b>If yes, what are your challenges in order of priority?</b></p>
+                                <label for="knowledge">Not knowing what to do</label>
+                                <select name="knowledge" id="knowledge">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <br/>
+                                <label for="mentors">Lack of mentors</label>
+                                <select name="mentors" id="mentors">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <br/>
+                                <label for="support">Lack of support</label>
+                                <select name="support" id="support">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <br/>
+                                <label for="Funding">Funding</label>
+                                <select name="Funding" id="Funding">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <br/>
+                                <p><b>Other</b></p>
+                                <textarea></textarea>
+                                <hr/>
+                                <br/>
+                                <p><b>Would you use a systematic platform that helps you know what to do?</b></p>
+                                <input type="radio" name="yes" id="yes" value="Yes">
+                                <label for="yes"> Yes</label><br>
+                                <input type="radio" name="no" id="no" value="No">
+                                <label for="no"> No</label><br>
+                                <hr/>
+                                <p><b>What questions do you have for us?</b></p>
+                                <textarea></textarea>
+                                <br/>
+                                <input style="background-color: #FF931E;border: none;" value="Submit" type="button">
+                            </div>
+                        </form>
+                    </div>
             </div>
         </section>
         <!-- Footer-->
@@ -277,7 +352,11 @@
         <!-- Contact form JS-->
         <script src="assets/mail/jqBootstrapValidation.js"></script>
         <script src="assets/mail/contact_me.js"></script>
+        <script>
+
+        </script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/survey.js"></script>
     </body>
 </html>
