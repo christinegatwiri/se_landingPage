@@ -53,7 +53,7 @@
                                 <input style="display: block;" type="text" name="LastName" placeholder="Last Name">
                             </div>
                             <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="userEmail" placeholder="Email address">
+                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address">
                             <button onclick="location.href = '#survey'" type="submit"><b>Submit</b></button>
                         </div>
 
@@ -345,19 +345,15 @@
                                 <p><b>What questions do you have for us?</b></p>
                                 <textarea id="questions" name="Questions"></textarea>
                                 <br/>
-                                <button style="background-color: #FF931E;border: none;" 
-                                    
-                                    type="submit"><b>Submit</b>
-                                </button>
+                                <button style="background-color: #FF931E;border: none;"type="submit"><b>Submit</b></button>
                                 <br/>
                                 <br/>
                                 <div id="my_id" style="color: darkcyan;" >
                                     <p>
                                         <b>Submitted successfully!Thank you for your response!</b>
-                                        <button style="background-color: #a3a3a3;border: none;" onclick="location.href = '#'"><b>Close Survey</b></button>
+                                        <div style="background-color: rgb(92, 29, 92);color:white;border-radius: 5px;padding: 5px; border: none;width: 30%;" onclick="location.href = '#'"><b>Close Survey</b></div>
                                     </p>
                                 </div>
-                                
                             </div>
                         </form>
                     </div>
@@ -396,11 +392,12 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    var getValue = $('#userEmail').val();
+                .then(response =>
+                {
+                    console.log('Success!', response)
+                    var getValue = $('#firstEmail').val();
                     console.log("heres the value",getValue);
                     $('#SurveyEmail').val(getValue);
-                    console.log('Success!', response);
                 })
                 .catch(error => console.error('Error!', error.message))
             })
