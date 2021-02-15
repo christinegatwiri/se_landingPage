@@ -53,7 +53,7 @@
                                 <input style="display: block;" type="text" name="LastName" placeholder="Last Name">
                             </div>
                             <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" placeholder="Email address">
+                            <input type="email" name="EmailAddress" id="userEmail" placeholder="Email address">
                             <button onclick="location.href = '#survey'" type="submit"><b>Submit</b></button>
                         </div>
 
@@ -261,7 +261,7 @@
                         <input type="text" name="FirstName" placeholder="First name">
                         <input type="text" name="LastName" placeholder="Last name"><br/>
                         <input type="text" name="PhoneNumber" placeholder="Phone Number">
-                        <input type="email" name="EmailAddress" placeholder="Email address"><br/>
+                        <input type="email" id="userEmail" name="EmailAddress" placeholder="Email address"><br/>
                         <button type="submit" onclick="location.href = '#survey'" class="button" ><b>Submit</b></button>
                     </div>
                 </form>
@@ -276,9 +276,10 @@
                         <br/>
                     </div>
                     <div class="content">
-                        <form name="survey-submit-to-google-sheet">
+                        <form name="submit-survey-to-google-sheet">
                             <p >Help us create a better platform for you by answering the following questions</p>
                             <div style="height: 100%;display: block;">
+                                <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
                                 <p ><b>Do you currently have a startup?</b></p>
                                     <div>
                                         <input type="radio" id="startup-yes" name="HasStartup" value="yes"
@@ -326,7 +327,7 @@
                                 </select>
                                 <br/>
                                 <p><b>Other</b></p>
-                                <textarea></textarea>
+                                <textarea id="otherChallenges" name="OtherChallenges"></textarea>
                                 <hr/>
                                 <br/>
                                 <p><b>Would you use a systematic platform that helps you know what to do?</b></p>
@@ -344,7 +345,19 @@
                                 <p><b>What questions do you have for us?</b></p>
                                 <textarea id="questions" name="Questions"></textarea>
                                 <br/>
-                                <button style="background-color: #FF931E;border: none;"type="submit"><b>Submit</b></button>
+                                <button style="background-color: #FF931E;border: none;" 
+                                    
+                                    type="submit"><b>Submit</b>
+                                </button>
+                                <br/>
+                                <br/>
+                                <div id="my_id" style="color: darkcyan;" >
+                                    <p>
+                                        <b>Submitted successfully!Thank you for your response!</b>
+                                        <button style="background-color: #a3a3a3;border: none;" onclick="location.href = '#'"><b>Close Survey</b></button>
+                                    </p>
+                                </div>
+                                
                             </div>
                         </form>
                     </div>
@@ -383,7 +396,12 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
+                .then(response => {
+                    var getValue = $('#userEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                    console.log('Success!', response);
+                })
                 .catch(error => console.error('Error!', error.message))
             })
         </script>
@@ -392,16 +410,26 @@
             secondForm.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(secondForm)})
-                .then(response => console.log('Success!', response))
+                .then(response => 
+                {
+                    console.log('Success!', response)
+                    var getValue = $('#userEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                })
                 .catch(error => console.error('Error!', error.message))
             })
         </script>
         <script>
-            const surveyForm = document.forms['survey-submit-to-google-sheet']
+            const surveyScriptURL = 'https://script.google.com/macros/s/AKfycbyHsZtbF2ff2lj5jW0q6ye6JSmX7Nq8UvNlGDy8A3nEJYMyAP3ydeQF/exec'
+            const surveyForm = document.forms['submit-survey-to-google-sheet']
+
             surveyForm.addEventListener('submit', e => {
               e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(surveyForm)})
-                .then(response => console.log('Success!', response))
+              fetch(surveyScriptURL, { method: 'POST', body: new FormData(surveyForm)})
+                .then(response => {
+                    document.getElementById('my_id').style.display = 'block' ;
+                    console.log('Success!', response)})
                 .catch(error => console.error('Error!', error.message))
             })
         </script>

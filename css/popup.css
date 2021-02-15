@@ -13,14 +13,19 @@
   .button {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
-    border-radius: 20px/50px;
+    color: rgb(0, 0, 0);
+    background-color: #FF931E;
     text-decoration: none;
+    width: 30%;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 5px;
+    border: none;
+    padding-top: 6px;
     transition: all 0.3s ease-out;
   }
   .button:hover {
-    background: #06D85F;
+    background: #e47a08;
   }
   
   .overlay {
@@ -58,7 +63,7 @@
     font-family: Tahoma, Arial, sans-serif;
   }
   .popup .close {
-    color: #aaa;
+    color: rgb(37, 37, 37);
     line-height: 50px;
     font-size: 80%;
     position: absolute;
@@ -76,6 +81,9 @@
     padding-bottom: 20px;
     overflow: auto;
   }
+  #my_id {
+    display: none;
+}
   
   @media screen and (max-width: 700px){
     .box{
