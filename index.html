@@ -44,7 +44,7 @@
                     </p>
                 </div>
                 <div>
-                    <form class="ctaform" name="submit-to-google-sheet">
+                    <form class="ctaform" action="#survey" name="submit-to-google-sheet">
                         <h4 class="desktop-content" style="color:#FF931E;"><b>Join the waiting list</b></h4>
                         <h5 class="mobile-content" style="color:#FF931E;padding-top: 20px;"><b>Join the waiting list</b></h5>
                         <div class="desktop-content" >
@@ -53,8 +53,8 @@
                                 <input style="display: block;" type="text" name="LastName" placeholder="Last Name">
                             </div>
                             <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" placeholder="Email address">
-                            <button type="submit"><b>Submit</b></button>
+                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address">
+                            <button onclick="location.href = '#survey'" type="submit"><b>Submit</b></button>
                         </div>
 
                         <div class="mobile-content" >
@@ -62,7 +62,7 @@
                             <input type="text" name="LastName" placeholder="Last Name">
                             <input style="margin-bottom: -18px;" type="text" name="PhoneNumber" placeholder="Phone Number">
                             <input type="email" name="EmailAddress" placeholder="Email address">
-                            <button type="submit"><b>Submit</b></button>
+                            <button onclick="location.href = '#survey'" type="submit"><b>Submit</b></button>
                         </div>
                         
                     </form>
@@ -255,37 +255,47 @@
                     <h3 class="section-heading">Join the waiting list</h3>
                     <br/>
                 </div>
-                <form class="text-center contactus" name="submit-to-google-sheet">
+                
+                <form class="text-center contactus" name="second-submit-to-google-sheet">
                     <div style="height: 100%;display: block;">
                         <input type="text" name="FirstName" placeholder="First name">
                         <input type="text" name="LastName" placeholder="Last name"><br/>
                         <input type="text" name="PhoneNumber" placeholder="Phone Number">
-                        <input type="email" name="EmailAddress" placeholder="Email address"><br/>
-                        <a class="button" href="#survey">Let me Pop up</a>
-                        <a type="submit" class="button" value="Join Us" href="#survey" style="background-color: #FF931E;border: none;">Submit</a>
+                        <input type="email" id="userEmail" name="EmailAddress" placeholder="Email address"><br/>
+                        <button type="submit" onclick="location.href = '#survey'" class="button" ><b>Submit</b></button>
                     </div>
                 </form>
             </div>
-            <div id="survey" class="overlay">
+
+            <!-- modal -->
+            <div id="survey" name="survey" class="overlay">
                 <div class="popup">
                     <div class="text-center">
                         <h3 style="color: black;">Before you go...</h3>
-                        <a class="close" href="#">&times;</a>
+                        <p class="close" onclick="location.href = '#'">Close</p>
                         <br/>
                     </div>
                     <div class="content">
-                        <form>
+                        <form name="submit-survey-to-google-sheet">
                             <p >Help us create a better platform for you by answering the following questions</p>
                             <div style="height: 100%;display: block;">
+                                <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
                                 <p ><b>Do you currently have a startup?</b></p>
-                                <input type="radio" name="yes" id="yes" value="Yes">
-                                <label for="yes"> Yes</label><br>
-                                <input type="radio" name="no" id="no" value="No">
-                                <label for="no"> No</label><br>
+                                    <div>
+                                        <input type="radio" id="startup-yes" name="HasStartup" value="yes"
+                                            checked>
+                                        <label for="startup-yes">Yes</label>
+                                    </div>
+                                  
+                                  <div>
+                                    <input type="radio" id="startup-no" name="HasStartup" value="no">
+                                    <label for="startup-no">No</label>
+                                  </div>
+
                                 <hr/>
                                 <p><b>If yes, what are your challenges in order of priority?</b></p>
                                 <label for="knowledge">Not knowing what to do</label>
-                                <select name="knowledge" id="knowledge">
+                                <select name="KnowledgePriority" id="knowledge">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -293,7 +303,7 @@
                                 </select>
                                 <br/>
                                 <label for="mentors">Lack of mentors</label>
-                                <select name="mentors" id="mentors">
+                                <select name="MentorsPriority" id="mentors">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -301,7 +311,7 @@
                                 </select>
                                 <br/>
                                 <label for="support">Lack of support</label>
-                                <select name="support" id="support">
+                                <select name="SupportPriority" id="support">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -309,7 +319,7 @@
                                 </select>
                                 <br/>
                                 <label for="Funding">Funding</label>
-                                <select name="Funding" id="Funding">
+                                <select name="FundingPriority" id="Funding">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -317,19 +327,33 @@
                                 </select>
                                 <br/>
                                 <p><b>Other</b></p>
-                                <textarea></textarea>
+                                <textarea id="otherChallenges" name="OtherChallenges"></textarea>
                                 <hr/>
                                 <br/>
                                 <p><b>Would you use a systematic platform that helps you know what to do?</b></p>
-                                <input type="radio" name="yes" id="yes" value="Yes">
-                                <label for="yes"> Yes</label><br>
-                                <input type="radio" name="no" id="no" value="No">
-                                <label for="no"> No</label><br>
+                                <div>
+                                    <input type="radio" id="platform-yes" name="WouldUsePlatform" value="yes"
+                                        checked>
+                                    <label for="platform-yes">Yes</label>
+                                </div>
+                              
+                              <div>
+                                <input type="radio" id="platform-no" name="WouldUsePlatform" value="no">
+                                <label for="platform-no">No</label>
+                              </div>
                                 <hr/>
                                 <p><b>What questions do you have for us?</b></p>
-                                <textarea></textarea>
+                                <textarea id="questions" name="Questions"></textarea>
                                 <br/>
-                                <input style="background-color: #FF931E;border: none;" value="Submit" type="button">
+                                <button style="background-color: #FF931E;border: none;"type="submit"><b>Submit</b></button>
+                                <br/>
+                                <br/>
+                                <div id="my_id" style="color: darkcyan;" >
+                                    <p>
+                                        <b>Submitted successfully!Thank you for your response!</b>
+                                        <div style="background-color: rgb(92, 29, 92);color:white;border-radius: 5px;padding: 5px; border: none;width: 30%;" onclick="location.href = '#'"><b>Close Survey</b></div>
+                                    </p>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -368,11 +392,46 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
+                .then(response =>
+                {
+                    console.log('Success!', response)
+                    var getValue = $('#firstEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                })
                 .catch(error => console.error('Error!', error.message))
             })
         </script>
+        <script>
+            const secondForm = document.forms['second-submit-to-google-sheet']
+            secondForm.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(secondForm)})
+                .then(response => 
+                {
+                    console.log('Success!', response)
+                    var getValue = $('#userEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        <script>
+            const surveyScriptURL = 'https://script.google.com/macros/s/AKfycbyHsZtbF2ff2lj5jW0q6ye6JSmX7Nq8UvNlGDy8A3nEJYMyAP3ydeQF/exec'
+            const surveyForm = document.forms['submit-survey-to-google-sheet']
+
+            surveyForm.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(surveyScriptURL, { method: 'POST', body: new FormData(surveyForm)})
+                .then(response => {
+                    document.getElementById('my_id').style.display = 'block' ;
+                    console.log('Success!', response)})
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-    </body>
+       </body>
 </html>
