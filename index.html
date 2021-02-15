@@ -20,6 +20,7 @@
         <link href="css/testimonials.css" rel="stylesheet" />
         <link href="css/hero-shot.css" rel="stylesheet" />
         <link href="css/solution-outlook.css" rel="stylesheet" />
+        <link href="css/popup.css" rel="stylesheet" />
         
     </head>
     <body id="page-top">
@@ -43,23 +44,27 @@
                     </p>
                 </div>
                 <div>
-                    <form class="ctaform" data-netlify="true">
+                    <form class="ctaform" name="submit-to-google-sheet">
                         <h4 class="desktop-content" style="color:#FF931E;"><b>Join the waiting list</b></h4>
                         <h5 class="mobile-content" style="color:#FF931E;padding-top: 20px;"><b>Join the waiting list</b></h5>
                         <div class="desktop-content" >
                             <div style="display: flex;flex-direction: row;">
-                                <input style="display: block;margin-right: 1%;" type="text" name="First Name" placeholder="First Name">
-                                <input style="display: block;" type="text" name="Last Name" placeholder="Last Name">
+                                <input style="display: block;margin-right: 1%;" type="text" name="FirstName" placeholder="First Name">
+                                <input style="display: block;" type="text" name="LastName" placeholder="Last Name">
                             </div>
-                            <input style="width: 100%;" type="text" name="Phone Number" placeholder="Phone Number">
+                            <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
+                            <input type="email" name="EmailAddress" placeholder="Email address">
+                            <button type="submit"><b>Submit</b></button>
                         </div>
+
                         <div class="mobile-content" >
-                            <input type="text" name="First Name" placeholder="First Name">
-                            <input type="text" name="Last Name" placeholder="Last Name">
-                            <input style="margin-bottom: -18px;" type="text" name="Phone Number" placeholder="Phone Number">
+                            <input type="text" name="FirstName" placeholder="First Name">
+                            <input type="text" name="LastName" placeholder="Last Name">
+                            <input style="margin-bottom: -18px;" type="text" name="PhoneNumber" placeholder="Phone Number">
+                            <input type="email" name="EmailAddress" placeholder="Email address">
+                            <button type="submit"><b>Submit</b></button>
                         </div>
-                        <input type="email" name="Email Address" placeholder="Email address">
-                        <button type="submit"><b>Submit</b></button>
+                        
                     </form>
                 </div>
             </div>
@@ -250,23 +255,26 @@
                     <h3 class="section-heading">Join the waiting list</h3>
                     <br/>
                 </div>
-                <form class="text-center contactus">
+                <form class="text-center contactus" name="submit-to-google-sheet">
                     <div style="height: 100%;display: block;">
-                        <input type="text" name="CTA First Name" placeholder="First name">
-                        <input type="text" name="CTA Last Name" placeholder="Last name"><br/>
-                        <input type="text" name="CTA Phone Number" placeholder="Phone Number">
-                        <input type="email" name="CTA Email address" placeholder="Email address"><br/>
-                        <input type="button" value="Join Us" id="contact-btn" onclick="switchVisible();" style="background-color: #FF931E;border: none;">
+                        <input type="text" name="FirstName" placeholder="First name">
+                        <input type="text" name="LastName" placeholder="Last name"><br/>
+                        <input type="text" name="PhoneNumber" placeholder="Phone Number">
+                        <input type="email" name="EmailAddress" placeholder="Email address"><br/>
+                        <a class="button" href="#survey">Let me Pop up</a>
+                        <a type="submit" class="button" value="Join Us" href="#survey" style="background-color: #FF931E;border: none;">Submit</a>
                     </div>
                 </form>
             </div>
-            <div id="new-survey" class="container">
-                <div class="text-center">
-                    <h3 class="section-heading">Before you go...</h3>
-                    <br/>
-                </div>
-                    <div>
-                        <form class="contactus survey" data-netlify="true">
+            <div id="survey" class="overlay">
+                <div class="popup">
+                    <div class="text-center">
+                        <h3 style="color: black;">Before you go...</h3>
+                        <a class="close" href="#">&times;</a>
+                        <br/>
+                    </div>
+                    <div class="content">
+                        <form>
                             <p >Help us create a better platform for you by answering the following questions</p>
                             <div style="height: 100%;display: block;">
                                 <p ><b>Do you currently have a startup?</b></p>
@@ -325,6 +333,7 @@
                             </div>
                         </form>
                     </div>
+                </div>
             </div>
         </section>
         <!-- Footer-->
@@ -353,10 +362,17 @@
         <script src="assets/mail/jqBootstrapValidation.js"></script>
         <script src="assets/mail/contact_me.js"></script>
         <script>
-
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzwS68o0Zax1DoE8IbupzzspeeU6Svl-ej1tQacBQEyIFSjcoz4Gq6R/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
         </script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <script src="js/survey.js"></script>
     </body>
 </html>
