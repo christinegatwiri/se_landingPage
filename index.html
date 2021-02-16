@@ -291,8 +291,7 @@
                                 <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
                                 <p ><b>Do you currently have a startup?</b></p>
                                     <div>
-                                        <input type="radio" id="startup-yes" name="HasStartup" value="yes"
-                                            checked>
+                                        <input type="radio" id="startup-yes" name="HasStartup" value="yes">
                                         <label for="startup-yes">Yes</label>
                                     </div>
                                   
@@ -305,6 +304,7 @@
                                 <p><b>If yes, what are your challenges in order of priority?</b></p>
                                 <label for="knowledge">Not knowing what to do</label>
                                 <select name="KnowledgePriority" id="knowledge">
+                                    <option selected disabled hidden>Pick the priority</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -313,6 +313,7 @@
                                 <br/>
                                 <label for="mentors">Lack of mentors</label>
                                 <select name="MentorsPriority" id="mentors">
+                                    <option selected disabled hidden>Pick the priority</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -321,6 +322,7 @@
                                 <br/>
                                 <label for="support">Lack of support</label>
                                 <select name="SupportPriority" id="support">
+                                    <option selected disabled hidden>Pick the priority</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -329,6 +331,7 @@
                                 <br/>
                                 <label for="Funding">Funding</label>
                                 <select name="FundingPriority" id="Funding">
+                                    <option selected disabled hidden>Pick the priority</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -341,8 +344,7 @@
                                 <br/>
                                 <p><b>Would you use a systematic platform that helps you know what to do?</b></p>
                                 <div>
-                                    <input type="radio" id="platform-yes" name="WouldUsePlatform" value="yes"
-                                        checked>
+                                    <input type="radio" id="platform-yes" name="WouldUsePlatform" value="yes">
                                     <label for="platform-yes">Yes</label>
                                 </div>
                               
@@ -359,8 +361,7 @@
                                 <br/>
                                 <div id="my_id" style="color: darkcyan;" >
                                     <p>
-                                        <b>Submitted successfully!Thank you for your response!</b>
-                                        <div style="background-color: rgb(92, 29, 92);color:white;border-radius: 5px;padding: 5px; border: none;width: 30%;" onclick="location.href = '#'"><b>Close Survey</b></div>
+                                        <b>Submitted successfully! Thank you for your response!</b>
                                     </p>
                                 </div>
                             </div>
@@ -430,12 +431,21 @@
             const surveyScriptURL = 'https://script.google.com/macros/s/AKfycbyHsZtbF2ff2lj5jW0q6ye6JSmX7Nq8UvNlGDy8A3nEJYMyAP3ydeQF/exec'
             const surveyForm = document.forms['submit-survey-to-google-sheet']
 
+            function sleep (time) {
+                return new Promise((resolve) => setTimeout(resolve, time));
+            }
+
             surveyForm.addEventListener('submit', e => {
               e.preventDefault()
               fetch(surveyScriptURL, { method: 'POST', body: new FormData(surveyForm)})
                 .then(response => {
-                    document.getElementById('my_id').style.display = 'block' ;
-                    console.log('Success!', response)})
+                    document.getElementById('my_id').style.display = 'block';
+                    console.log("heres before")
+                    sleep(700).then(() => {
+                        window.location.href="#";
+                        console.log('Success!', response)
+                    });
+                    })
                 .catch(error => console.error('Error!', error.message))
             })
         </script>
