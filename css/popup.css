@@ -74,7 +74,7 @@
     text-decoration: none;
   }
   .popup .close:hover {
-    color: #06D85F;
+    color: #e47a08;
   }
   .popup .content {
     max-height: 30%;
@@ -84,7 +84,32 @@
   #my_id {
     display: none;
 }
+#wrapper {
+  display: flex;
+}
+  /* loadinggg */
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #e47a08;
+    width: 30px;
+    height: 30px;
+    display: none;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
   
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
   @media screen and (max-width: 700px){
     .box{
       width: 70%;

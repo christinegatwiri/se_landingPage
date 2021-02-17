@@ -53,28 +53,29 @@
                     </p>
                 </div>
                 <div>
-                    <form class="ctaform" action="#survey" name="submit-to-google-sheet">
-                        <h4 class="desktop-content" style="color:#FF931E;"><b>Join the waiting list</b></h4>
-                        <h5 class="mobile-content" style="color:#FF931E;padding-top: 20px;"><b>Join the waiting list</b></h5>
-                        <div class="desktop-content" >
+                    <form class="ctaform desktop-content" name="submit-to-google-sheet" onsubmit="location.href = '#survey'">
+                        <h4 style="color:#FF931E;"><b>Join the waiting list</b></h4>
+                        <div>
                             <div style="display: flex;flex-direction: row;">
                                 <input style="display: block;margin-right: 1%;" type="text" name="FirstName" placeholder="First Name">
                                 <input style="display: block;" type="text" name="LastName" placeholder="Last Name">
                             </div>
                             <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address">
-                            <button onclick="location.href = '#survey'" type="submit"><b>Submit</b></button>
+                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address" required>
+                            <button type="submit"><b>Submit</b></button>
                         </div>
+                    </form>
 
-                        <div class="mobile-content" >
+                    <form class="ctaform mobile-content" action="#survey" onsubmit="location.href = '#survey'" name="submit-to-google-sheet">
+                        <h5 style="color:#FF931E;padding-top: 20px;"><b>Join the waiting list</b></h5>
+                        <div>
                             <input type="text" name="FirstName" placeholder="First Name">
                             <input type="text" name="LastName" placeholder="Last Name">
                             <input style="margin-bottom: -18px;" type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address">
-                            <button onclick="location.href = '#survey'" type="submit"><b>Submit</b></button>
+                            <input type="email" name="EmailAddress" id="firstEmail" required placeholder="Email address">
+                            <button type="submit"><b>Submit</b></button>
                         </div>
-                        
-                    </form>
+                    </form>          
                 </div>
             </div>
         </header>
@@ -265,13 +266,13 @@
                     <br/>
                 </div>
                 
-                <form class="text-center contactus" name="second-submit-to-google-sheet">
+                <form class="text-center contactus" onsubmit="location.href = '#survey'" name="second-submit-to-google-sheet">
                     <div style="height: 100%;display: block;">
                         <input type="text" name="FirstName" placeholder="First name">
                         <input type="text" name="LastName" placeholder="Last name"><br/>
                         <input type="text" name="PhoneNumber" placeholder="Phone Number">
-                        <input type="email" id="userEmail" name="EmailAddress" placeholder="Email address"><br/>
-                        <button type="submit" onclick="location.href = '#survey'" class="button" ><b>Submit</b></button>
+                        <input type="email" id="userEmail" required name="EmailAddress" placeholder="Email address"><br/>
+                        <button type="submit" class="button" ><b>Submit</b></button>
                     </div>
                 </form>
             </div>
@@ -286,63 +287,78 @@
                     </div>
                     <div class="content">
                         <form name="submit-survey-to-google-sheet">
-                            <p >Help us create a better platform for you by answering the following questions</p>
+                            <p>Help us create a better platform for you by answering the following questions</p>
                             <div style="height: 100%;display: block;">
                                 <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
-                                <p ><b>Do you currently have a startup?</b></p>
+                                <p><b>Do you currently have a startup or idea?</b></p>
                                     <div>
-                                        <input type="radio" id="startup-yes" name="HasStartup" value="yes">
-                                        <label for="startup-yes">Yes</label>
+                                        <input type="radio" id="startup-yes" name="HasStartup" value="idea">
+                                        <label for="startup-idea">I have an idea</label>
                                     </div>
                                   
                                   <div>
-                                    <input type="radio" id="startup-no" name="HasStartup" value="no">
-                                    <label for="startup-no">No</label>
+                                    <input type="radio" id="startup-no" name="HasStartup" value="startup">
+                                    <label for="startup-startup">I have a startup</label>
+                                  </div>
+
+                                  <div>
+                                    <input type="radio" id="startup-no" name="HasStartup" value="interested">
+                                    <label for="startup-interested">None, I'm just interested</label>
                                   </div>
 
                                 <hr/>
-                                <p><b>If yes, what are your challenges in order of priority?</b></p>
-                                <label for="knowledge">Not knowing what to do</label>
-                                <select name="KnowledgePriority" id="knowledge">
-                                    <option selected disabled hidden>Pick the priority</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <br/>
-                                <label for="mentors">Lack of mentors</label>
-                                <select name="MentorsPriority" id="mentors">
-                                    <option selected disabled hidden>Pick the priority</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <br/>
-                                <label for="support">Lack of support</label>
-                                <select name="SupportPriority" id="support">
-                                    <option selected disabled hidden>Pick the priority</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <br/>
-                                <label for="Funding">Funding</label>
-                                <select name="FundingPriority" id="Funding">
-                                    <option selected disabled hidden>Pick the priority</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
+                                
+                                <!-- add radio options here -->
+                                <p><b>On a scale of one to five, how much are you affected by each these challenges?</b></p>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td  style="padding-right: 15px;"><b>1</b></td>
+                                        <td style="padding-right: 15px;"><b>2</b></td>
+                                        <td style="padding-right: 15px;"><b>3</b></td>
+                                        <td style="padding-right: 15px;"><b>4</b></td>
+                                        <td style="padding-right: 15px;"><b>5</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowStyling" style="padding-right: 150px;">Not knowing what to do</td>
+                                        <td style="padding-right: 15px;"><input type="radio" name="KnowledgePriority" value="1"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="2"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="3"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="4"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of mentors</td>
+                                        <td><input type="radio" name="MentorsPriority" value="1"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="2"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="3"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of support</td>
+                                        <td><input type="radio" name="SupportPriority" value="1"></td>
+                                        <td><input type="radio" name="SupportPriority" value="2"></td>
+                                        <td><input type="radio" name="SupportPriority" value="3"></td>
+                                        <td><input type="radio" name="SupportPriority" value="4"></td>
+                                        <td><input type="radio" name="SupportPriority" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of funding</td>
+                                        <td><input type="radio" name="FundingPriority" value="1"></td>
+                                        <td><input type="radio" name="FundingPriority" value="2"></td>
+                                        <td><input type="radio" name="FundingPriority" value="3"></td>
+                                        <td><input type="radio" name="FundingPriority" value="4"></td>
+                                        <td><input type="radio" name="FundingPriority" value="5"></td>
+                                    </tr>
+                                </table>
+
                                 <br/>
                                 <p><b>Other</b></p>
                                 <textarea id="otherChallenges" name="OtherChallenges"></textarea>
                                 <hr/>
                                 <br/>
-                                <p><b>Would you use a systematic platform that helps you know what to do?</b></p>
+                                <p><b>Would you use a platform that guides you through your entrepreneurship journey?</b></p>
                                 <div>
                                     <input type="radio" id="platform-yes" name="WouldUsePlatform" value="yes">
                                     <label for="platform-yes">Yes</label>
@@ -356,8 +372,13 @@
                                 <p><b>What questions do you have for us?</b></p>
                                 <textarea id="questions" name="Questions"></textarea>
                                 <br/>
-                                <button style="background-color: #FF931E;border: none;"type="submit"><b>Submit</b></button>
-                                <br/>
+                                <div id="wrapper">
+                                    <button style="background-color: #FF931E;border: none;"
+                                        onclick="loadingActivate()" 
+                                        type="submit"><b>Submit</b>
+                                    </button>&nbsp;&nbsp;
+                                    <div id="loading" class="loader"></div>
+                                </div>
                                 <br/>
                                 <div id="my_id" style="color: darkcyan;" >
                                     <p>
@@ -435,10 +456,15 @@
                 return new Promise((resolve) => setTimeout(resolve, time));
             }
 
+            function loadingActivate(){
+                document.getElementById('loading').style.display = "block";
+            }
+
             surveyForm.addEventListener('submit', e => {
               e.preventDefault()
               fetch(surveyScriptURL, { method: 'POST', body: new FormData(surveyForm)})
                 .then(response => {
+                    document.getElementById('loading').style.display = 'none';
                     document.getElementById('my_id').style.display = 'block';
                     console.log("heres before")
                     sleep(700).then(() => {
