@@ -266,13 +266,13 @@
                     <br/>
                 </div>
                 
-                <form class="text-center contactus" name="second-submit-to-google-sheet">
+                <form class="text-center contactus" onsubmit="location.href = '#survey'" name="second-submit-to-google-sheet">
                     <div style="height: 100%;display: block;">
                         <input type="text" name="FirstName" placeholder="First name">
                         <input type="text" name="LastName" placeholder="Last name"><br/>
                         <input type="text" name="PhoneNumber" placeholder="Phone Number">
-                        <input type="email" id="userEmail" name="EmailAddress" placeholder="Email address"><br/>
-                        <button type="submit" onclick="location.href = '#survey'" class="button" ><b>Submit</b></button>
+                        <input type="email" id="userEmail" required name="EmailAddress" placeholder="Email address"><br/>
+                        <button type="submit" class="button" ><b>Submit</b></button>
                     </div>
                 </form>
             </div>
@@ -290,54 +290,69 @@
                             <p>Help us create a better platform for you by answering the following questions</p>
                             <div style="height: 100%;display: block;">
                                 <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
-                                <p><b>Do you currently have a startup?</b></p>
+                                <p><b>Do you currently have a startup or idea?</b></p>
                                     <div>
-                                        <input type="radio" id="startup-yes" name="HasStartup" value="yes">
-                                        <label for="startup-yes">Yes</label>
+                                        <input type="radio" id="startup-yes" name="HasStartup" value="idea">
+                                        <label for="startup-idea">I have an idea</label>
                                     </div>
                                   
                                   <div>
-                                    <input type="radio" id="startup-no" name="HasStartup" value="no">
-                                    <label for="startup-no">No</label>
+                                    <input type="radio" id="startup-no" name="HasStartup" value="startup">
+                                    <label for="startup-startup">I have a startup</label>
+                                  </div>
+
+                                  <div>
+                                    <input type="radio" id="startup-no" name="HasStartup" value="interested">
+                                    <label for="startup-interested">None, I'm just interested</label>
                                   </div>
 
                                 <hr/>
-                                <p><b>If yes, what are your challenges in order of priority?</b></p>
-                                <label for="knowledge">Not knowing what to do</label>
-                                <select name="KnowledgePriority" id="knowledge">
-                                    <option value="1" selected>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <br/>
-                                <label for="mentors">Lack of mentors</label>
-                                <select name="MentorsPriority" id="mentors">
-                                    <option value="1" selected>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <br/>
-                                <label for="support">Lack of support</label>
-                                <select name="SupportPriority" id="support">
-                                    <option value="1" selected>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <br/>
-                                <label for="Funding">Funding</label>
-                                <select name="FundingPriority" id="Funding">
-                                    <option value="1" selected>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
+                                
+                                <!-- add radio options here -->
+                                <p><b>On a scale of one to five, how much are you affected by each these challenges?</b></p>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td  style="padding-right: 15px;"><b>1</b></td>
+                                        <td style="padding-right: 15px;"><b>2</b></td>
+                                        <td style="padding-right: 15px;"><b>3</b></td>
+                                        <td style="padding-right: 15px;"><b>4</b></td>
+                                        <td style="padding-right: 15px;"><b>5</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rowStyling" style="padding-right: 150px;">Not knowing what to do</td>
+                                        <td style="padding-right: 15px;"><input type="radio" name="KnowledgePriority" value="1"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="2"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="3"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="4"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of mentors</td>
+                                        <td><input type="radio" name="MentorsPriority" value="1"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="2"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="3"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of support</td>
+                                        <td><input type="radio" name="SupportPriority" value="1"></td>
+                                        <td><input type="radio" name="SupportPriority" value="2"></td>
+                                        <td><input type="radio" name="SupportPriority" value="3"></td>
+                                        <td><input type="radio" name="SupportPriority" value="4"></td>
+                                        <td><input type="radio" name="SupportPriority" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of funding</td>
+                                        <td><input type="radio" name="FundingPriority" value="1"></td>
+                                        <td><input type="radio" name="FundingPriority" value="2"></td>
+                                        <td><input type="radio" name="FundingPriority" value="3"></td>
+                                        <td><input type="radio" name="FundingPriority" value="4"></td>
+                                        <td><input type="radio" name="FundingPriority" value="5"></td>
+                                    </tr>
+                                </table>
+
                                 <br/>
                                 <p><b>Other</b></p>
                                 <textarea id="otherChallenges" name="OtherChallenges"></textarea>
