@@ -44,6 +44,10 @@ input[type=email]{
     padding: 5px;
     width: 100%;
 }
+.mobile-wrapper{
+    display: flex;
+    text-align:center;
+}
 .ctaform button{
     margin-top: 5px;
     padding-top: 80px;
@@ -67,6 +71,7 @@ input[type=email]{
 #new-survey{
     display: none;
 }
+
 .contactus input[type=text]{
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -139,10 +144,12 @@ input[type=email]{
     .ctaform button{
         margin-top: 5px;
         padding-top: 80px;
+        margin-left: 40px;
         width: 80%;
         border-radius: 5px;
         padding: 5px;
     }
+
     .contactus{
         padding:15px;
     }

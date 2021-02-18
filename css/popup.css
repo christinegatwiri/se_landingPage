@@ -76,6 +76,13 @@
   .popup .close:hover {
     color: #e47a08;
   }
+
+  .rating td{
+    padding-right: 15px;
+  }
+  .rating-title{
+    padding-right: 150px;
+  }
   .popup .content {
     max-height: 30%;
     padding-bottom: 20px;
@@ -84,9 +91,9 @@
   #my_id {
     display: none;
 }
-#wrapper {
-  display: flex;
-}
+  #wrapper {
+    display: flex;
+  }
   /* loadinggg */
   .loader {
     border: 5px solid #f3f3f3;
@@ -116,5 +123,8 @@
     }
     .popup{
       width: 90%;
+    }
+    .rating-title{
+      padding-right: 50px;
     }
   }

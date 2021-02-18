@@ -53,7 +53,7 @@
                     </p>
                 </div>
                 <div>
-                    <form class="ctaform desktop-content" name="submit-to-google-sheet" onsubmit="location.href = '#survey'">
+                    <form class="ctaform desktop-content" name="submit-to-google-sheet" onsubmit="onHeroSubmit()">
                         <h4 style="color:#FF931E;"><b>Join the waiting list</b></h4>
                         <div>
                             <div style="display: flex;flex-direction: row;">
@@ -62,18 +62,24 @@
                             </div>
                             <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
                             <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address" required>
-                            <button type="submit"><b>Submit</b></button>
+                            <div style="display: flex;">
+                                <button type="submit"><b>Submit</b></button>&nbsp;
+                                <div id="loader" class="loader"></div>
+                            </div>
                         </div>
                     </form>
 
-                    <form class="ctaform mobile-content" action="#survey" onsubmit="location.href = '#survey'" name="submit-to-google-sheet">
+                    <form class="ctaform mobile-content" onsubmit="onMobileSubmit()" name="mobile-submit-to-google-sheet">
                         <h5 style="color:#FF931E;padding-top: 20px;"><b>Join the waiting list</b></h5>
                         <div>
                             <input type="text" name="FirstName" placeholder="First Name">
                             <input type="text" name="LastName" placeholder="Last Name">
-                            <input style="margin-bottom: -18px;" type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="firstEmail" required placeholder="Email address">
-                            <button type="submit"><b>Submit</b></button>
+                            <input type="text" name="PhoneNumber" placeholder="Phone Number">
+                            <input type="email" name="EmailAddress" id="mobileEmail" required placeholder="Email address">
+                            <div class="mobile-wrapper">
+                                <button type="submit"><b>Submit</b></button>&nbsp;
+                                <div id="mobile-loader" class="loader"></div>
+                            </div>
                         </div>
                     </form>          
                 </div>
@@ -311,17 +317,17 @@
                                 <!-- add radio options here -->
                                 <p><b>On a scale of one to five, how much are you affected by each these challenges?</b></p>
                                 <table>
-                                    <tr>
+                                    <tr class="rating">
                                         <td></td>
-                                        <td  style="padding-right: 15px;"><b>1</b></td>
-                                        <td style="padding-right: 15px;"><b>2</b></td>
-                                        <td style="padding-right: 15px;"><b>3</b></td>
-                                        <td style="padding-right: 15px;"><b>4</b></td>
-                                        <td style="padding-right: 15px;"><b>5</b></td>
+                                        <td><b>1</b></td>
+                                        <td><b>2</b></td>
+                                        <td><b>3</b></td>
+                                        <td><b>4</b></td>
+                                        <td><b>5</b></td>
                                     </tr>
-                                    <tr>
-                                        <td class="rowStyling" style="padding-right: 150px;">Not knowing what to do</td>
-                                        <td style="padding-right: 15px;"><input type="radio" name="KnowledgePriority" value="1"></td>
+                                    <tr >
+                                        <td class="rating-title">Not knowing what to do</td>
+                                        <td><input type="radio" name="KnowledgePriority" value="1"></td>
                                         <td><input type="radio" name="KnowledgePriority" value="2"></td>
                                         <td><input type="radio" name="KnowledgePriority" value="3"></td>
                                         <td><input type="radio" name="KnowledgePriority" value="4"></td>
@@ -419,12 +425,18 @@
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzwS68o0Zax1DoE8IbupzzspeeU6Svl-ej1tQacBQEyIFSjcoz4Gq6R/exec'
             const form = document.forms['submit-to-google-sheet']
+
+            function onHeroSubmit(){
+                document.getElementById('loader').style.display = 'block';
+            }
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response =>
                 {
+                    location.href = '#survey';
+                    document.getElementById('loader').style.display = 'none';
                     console.log('Success!', response)
                     var getValue = $('#firstEmail').val();
                     console.log("heres the value",getValue);
@@ -442,6 +454,28 @@
                 {
                     console.log('Success!', response)
                     var getValue = $('#userEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        <script>
+            const thirdForm = document.forms['mobile-submit-to-google-sheet']
+
+            function onMobileSubmit(){
+                document.getElementById('mobile-loader').style.display = 'block';
+            }
+            
+            thirdForm.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(thirdForm)})
+                .then(response => 
+                {
+                    location.href = '#survey';
+                    document.getElementById('mobile-loader').style.display = 'none';
+                    console.log('Success!', response)
+                    var getValue = $('#mobileEmail').val();
                     console.log("heres the value",getValue);
                     $('#SurveyEmail').val(getValue);
                 })
