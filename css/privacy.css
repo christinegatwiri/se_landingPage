@@ -1,0 +1,35 @@
+.privacycontent{
+    float: left;
+    width: 80%;
+    padding: 5px;
+    padding-left: 30px;
+}
+.privacyimage {
+    height: 240px;
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+.privacyrow::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+@media screen and (max-width: 700px) {
+    .privacyimage {
+        height: 220px;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        float:none;
+        margin-right: auto;
+    }
+    .privacycontent{
+        margin-left: 1px;
+        float:none;
+        width: 100%;
+
+    }
+}
+
