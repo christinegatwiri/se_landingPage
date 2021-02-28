@@ -3,6 +3,8 @@
     .benefit{
         display: flex;
         position: relative;
+        padding-bottom: 80px;
+
 
     }
   .benefitpic{
@@ -12,7 +14,7 @@
   }
   
   .benefitpic img{
-    height: 450px;
+    height: 500px;
     padding: 5px;
   }
 
@@ -23,26 +25,20 @@
   }
 
   .benefitpic-right img{
-    height: 450px;
+    height: 500px;
     padding: 5px;
   }
 
   .benefit-section{
-    width: 60%;
+    width: 50%;
     float: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: auto; 
+     
   }
 
   .benefit-section-left{
     width: 50%;
     float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: auto; 
+    
   }
 
   .benefit-group{
