@@ -1,38 +1,33 @@
 /* Float four columns side by side */
 
-    .benefit{
-        display: flex;
-        position: relative;
-        padding-bottom: 80px;
-
-
-    }
+  .benefit{
+    display: flex;
+    position: relative;
+  }
+  
   .benefitpic{
-    float: left;
-    width: 50%;
+    text-align: center;
     padding: 5px;
   }
   
   .benefitpic img{
-    height: 500px;
+    height: 350px;
     padding: 5px;
+    align-content: center;
   }
 
   .benefitpic-right{
     float: right;
-    width: 50%;
     padding: 5px;
   }
 
   .benefitpic-right img{
-    height: 500px;
+    width: 100%;
     padding: 5px;
   }
 
   .benefit-section{
-    width: 50%;
-    float: right;
-     
+     text-align: center;
   }
 
   .benefit-section-left{
