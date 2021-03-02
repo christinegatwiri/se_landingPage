@@ -67,6 +67,18 @@
     height: auto;
     max-width: 100%;
   }
+
+  @media screen and (max-width: 1199px) {
+    .thiscolumn-66,
+    .thiscolumn-66-right,
+    .thiscolumn-33 {
+      width: 100%;
+      text-align: center;
+    }
+    .thisimg {
+      margin: auto;
+    }
+  }
   
   @media screen and (max-width: 1000px) {
     .thiscolumn-66,
@@ -79,3 +91,4 @@
       margin: auto;
     }
   }
+
