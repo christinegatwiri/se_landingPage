@@ -3,7 +3,6 @@
     float: left;
     width: 25%;
     padding: 0 10px;
-    
   }
   
   .outlookcolumn p{
@@ -24,6 +23,14 @@
   }
   
   /* Responsive columns */
+  @media screen and (max-width: 768px) {
+    .outlookcolumn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      padding-top: 10px;
+    }
+  }
   @media screen and (max-width: 600px) {
     .outlookcolumn {
       width: 100%;
