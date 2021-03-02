@@ -1,5 +1,19 @@
 /* Float four columns side by side */
 
+  .main-benefit{
+    display: flex;
+    padding:30px;
+  }
+
+  .left-benefit{
+    float: left;
+    width: 50%;
+  }
+
+  .right-benefit{
+    width: 50%;
+  }
+
   .benefit{
     display: flex;
     position: relative;
@@ -49,7 +63,20 @@
   }
   /* Responsive columns */
   @media screen and (max-width: 600px) {
-      .benefit{
+    .main-benefit{
+      display: block;
+      padding:30px;
+    }
+  
+    .left-benefit{
+      float: none;
+      width: 100%;
+    }
+  
+    .right-benefit{
+      width: 100%;
+    }  
+    .benefit{
           display: block;
       }
 
@@ -61,7 +88,7 @@
     }
     .benefitpic img{
         width: 100%;
-        height: 260px;
+        height: 220px;
         float: none;
     }
     .benefit-section{
