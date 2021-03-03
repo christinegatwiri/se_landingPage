@@ -1,0 +1,44 @@
+/* Float four columns side by side */
+.workscolumn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    
+  }
+  
+  .workscolumn p{
+      font-size: smaller;
+  }
+  /* Remove extra left and right margins, due to padding */
+  .worksrow {margin: 0 0;}
+  
+  /* Clear floats after the columns */
+  .worksrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .workspic img {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .workscolumn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      padding-top: 10px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .workscard {
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    width: 98%;
+    border-radius: 10px;
+    background-color: white;
+  }
