@@ -213,7 +213,7 @@ input[type=email]{
     @media (min-width: 768px) {
         header.mainheader {
         padding-top: 16.5rem;
-        padding-bottom: 11.9rem;
+        padding-bottom: 15.9rem;
         text-align: center;
         /* display: flex; */
     }
