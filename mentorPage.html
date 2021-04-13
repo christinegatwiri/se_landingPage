@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta name="description" content="A platform that provides entrepreneurs with a step by step process for developing
+        your idea, along with community, mentors and content to help you stay on track." />
+        <meta name="author" content="" />
+        <meta property="og:title" content="Systematic Entrepreneurship" />
+        <meta property="og:url" content="https://www.seplatform.co/"/>
+        <meta property="og:description" content="A platform that provides entrepreneurs with a step by step process for developing
+        your idea">
+        <meta property="og:site_name" content="Systematic Entrepreneurship"/>
+        <meta property="og:image" itemprop="image" content="https://raw.github.com/christinegatwiri/christinegatwiri.github.io/master/assets/img/SE_Profile_PIC.jpg"/>
+        <meta property="og:image:width" content="180"/>
+        <meta property="og:image:height" content="216"/>
+        <title>Systematic Entrepreneurship</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/profpic.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Latest compiled and minified CSS -->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/how-it-works.css" rel="stylesheet" />
+        <link href="css/testimonials.css" rel="stylesheet" />
+        <link href="css/mentor-hero-shot.css" rel="stylesheet" />
+        <link href="css/solution-outlook.css" rel="stylesheet" />
+        <link href="css/popup.css" rel="stylesheet" />
+        <link href="css/privacy.css" rel="stylesheet" />
+        <link href="css/mentor_how_it_workss.css" rel="stylesheet" />
+        <link href="css/benefits.css" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZ3G8BMLQT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BZ3G8BMLQT');
+        </script>
+        <!-- Hotjar Tracking Code for  -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2249659,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="height: 50px;" src="assets/img/logo.png" alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <button style="background-color: #FF931E;border: none;" class="nav-item btn ">
+                            <a class="nav-link js-scroll-trigger" style="color: black;" href="index.html">
+                                <b>Back to SE</b>
+                            </a>
+                        </button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="mainheader">
+            <div class="container">
+                <div class="mainheading">
+                    <h1 style="color:#FF931E;padding-top: 40px;" class="desktop-content">Mentor our community of entrepreneurs</h1>
+                    <h2 class="mobile-content-heading" style="font-size: xx-large;color:#FF931E;">Mentor budding entrepreneurs</h2>
+                    <p class="desktop-content">Join our group of mentors to help support our community of budding entrepreneurs 
+                        and innovators with industry knowledge and advice.
+                    </p>
+                    <p class="mobile-content">Join our group of mentors to help support our community of budding 
+                        entrepreneurs and innovators with industry knowledge and advice.
+                    </p>
+                </div>
+                <div>
+                    <form class="ctaform desktop-content" name="submit-to-google-sheet" onsubmit="onHeroSubmit()">
+                        <h5 style="color:#FF931E;"><b>Join the mentor network</b></h5>
+                        <div>
+                            <div style="display: flex;flex-direction: row;">
+                                <input style="display: block;margin-right: 1%;" required type="text" name="FirstName" placeholder="First Name">
+                                <input style="display: block;" type="text" required name="LastName" placeholder="Last Name">
+                            </div>
+                            <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
+                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address" required>
+                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Company" required>
+                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Position" required>
+                            <label for="cars">Select Your nationality: </label>
+                            <select name="cars" id="cars">
+                                <option value="kenya">Kenya</option>
+                                <option value="uganda">Uganda</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="japan">Japan</option>
+                            </select>
+                            <div style="display: flex;">
+                                <button type="submit"><b>Submit</b></button>&nbsp;
+                                <div id="loader" class="first-loader"></div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form class="ctaform mobile-content" onsubmit="onMobileSubmit()" name="mobile-submit-to-google-sheet">
+                        <h5 style="color:#FF931E;padding-top: 20px;"><b>Join the wait list</b></h5>
+                        <div>
+                            <input type="text" name="FirstName" required placeholder="First Name">
+                            <input type="text" name="LastName" required placeholder="Last Name">
+                            <input type="text" name="PhoneNumber" placeholder="Phone Number">
+                            <input type="email" name="EmailAddress" id="mobileEmail" required placeholder="Email address">
+                            <div class="mobile-wrapper">
+                                <button type="submit"><b>Submit</b></button>&nbsp;
+                                <div id="mobile-loader" class="loader"></div>
+                            </div>
+                        </div>
+                    </form>          
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        
+          <section class="page-section" style="margin-top: 20px;margin-bottom: -20px;">
+            <div class="text-center">
+                <h2  class="section-heading">Help shape tomorrow</h2>
+                <p class="section-subheading">Become a mentor and help shape the next generation of aspiring entrepreneurs and businesses. </p>
+            </div>
+             <!-- Clarity Section -->
+             <div class="" >
+                <div class="worksrow">
+                    <div class="workscolumn">
+                      <div class="workspic" style="text-align: center;">
+                          <br/>
+                          <img class="img-fluid" style="height: 220px;" src="assets/img/benefits/seminar.jpg" alt="" />
+                          <h5 >Inspire entrepreneurs</h5>
+                            <p>Get to interact with an entrepreneur on a personal level, giving them insights on their ideas and startups
+                            </p>
+                        <br/>
+                        <br/>
+                      </div>
+                    </div>
+                  
+                    <div class="workscolumn">
+                        <div class="workspic" style="text-align: center;">
+                            <br/>
+                            <img class="img-fluid" style="height: 220px;" src="assets/img/benefits/knowledge2.jpg" alt="" />
+                            <h5>Pass knowledge</h5>
+                              <p>Help guide a group of entrepreneurs through their different ideas and startups</p>
+                          <br/>
+                        </div>
+                      </div>
+                      <div class="workscolumn">
+                        <div class=" workspic" style="text-align: center;">
+                            <br/>
+                            <img class="img-fluid" style="height: 220px;" src="assets/img/benefits/knowledge.png" alt="" />
+                            <h5>Grow ecosystem</h5>
+                              <p>Interact with the entrepreneurs in our community by having technical sessions with them, 
+                                  sharing industry expertise and technical skills.</p>
+                          <br/>
+                          <br/>
+                        </div>
+                      </div>
+                      <div class="workscolumn">
+                        <div class="workspic" style="text-align: center;">
+                            <br/>
+                            <img class="img-fluid" style="height: 220px;" src="assets/img/benefits/impact.png" alt="" />
+                            <h5>Make Impact</h5>
+                            <p>Share your technical knowledge through recorded sessions where many entrepreneurs can learn at any time</p>
+                          <br/>
+                          <br/>
+                          <br/>
+                        </div>
+                      </div>
+                      
+                </div>
+                </div>
+            </div>
+        </section>      
+<!-- benefits/what you'll get -->
+<section class="page-section" id="portfolio" style="margin-top: -110px;background-image: linear-gradient(white,#f2f2f2);" >
+    <div class="text-center">
+        <h2  class="section-heading">Types of mentorship</h2>
+        <p class="section-subheading text-muted">Here are some ways you can help mentor the entrepreneurs </p>
+    </div>
+    <div class="top-benefit">
+
+    <div class="main-benefit">
+        <div class="left-benefit">
+            <div class="benefitpic">
+                <img src="assets/img/mentor4.jpg" style="border-radius: 15px;">
+            </div>
+            <div class="benefit-section">
+                <div class="thisrow">
+                    <div class="thiscolumn-66">
+                        <h5 class="ftco-animate"><b>One on One Mentorship</b></h5>
+                        <p class="ftco-animate">Get to interact with an entrepreneur on a personal level, giving them insights on their ideas and startups
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-benefit">
+            <div class="benefitpic">
+                <img src="assets/img/mentor3.jpg" style="border-radius: 15px;">
+            </div>
+            <div class="benefit-section">
+                <div class="thisrow">
+                    <div class="thiscolumn-66">
+                        <h5 class="ftco-animate"><b>Group Mentoring</b></h5>
+                        <p class="ftco-animate">Help guide a group of entrepreneurs through their different ideas and startups
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-benefit">
+        <div class="left-benefit">
+            <div class="benefitpic">
+                <img src="assets/img/mentor8.jpg" style="border-radius: 15px;">
+            </div>
+            <div class="benefit-section">
+                <div class="thisrow">
+                    <div class="thiscolumn-66">
+                        <h5 class="ftco-animate"><b>Technical sessions</b></h5>
+                        <p class="ftco-animate">Interact with the entrepreneurs in our community by having technical 
+                            sessions with them, sharing industry expertise and technical skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-benefit">
+            <div class="benefitpic">
+                <img src="assets/img/mentor7.jpg" style="border-radius: 15px;">
+            </div>
+            <div class="benefit-section">
+                <div class="thisrow">
+                    <div class="thiscolumn-66">
+                        <h5 class="ftco-animate"><b>Masterclasses</b></h5>
+                        <p class="ftco-animate">Share your technical knowledge through recorded sessions where many entrepreneurs can learn at any time
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>          
+</section>  
+        <!--testimonials -->
+        <!-- benefits/what you'll get -->
+         <!-- Testimonial-->
+        <section class="page-section bg-light" id="team" >
+            <div class="">
+                <div class="text-center">
+                    <h2 class="section-heading">Testimonials</h2>
+                    <p class="section-subheading text-muted">Get insights from some of the members of the SE community</p>
+                    <br/>
+                </div>
+                <div class="main-testimonial" >
+                    <div class="card-holder" >
+                        <div class="testimonialcard" style="background-color: rgb(33, 37, 41);color: white;">
+                            <div class="team-member">
+                                <img class="mx-auto rounded-circle" src="assets/img/Mercy.jpeg" alt="" />
+                                <h4 style="color: #FF931E">Mercy Nyaramba</h4>
+                                <p class="section-subheading">Mentee, Product Developer at Impact Africa Network</p>
+                                <p>As young innovators, we found great value in how on track and     
+                                    accountable the SE approach ensured we are. This contributed to how fast we could 
+                                    execute. Speed is crucial for all entrepreneurs. This is very much needed within our ecosystem</p>
+                                    <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-holder" >
+                        <div class="testimonialcard" style="background-color: rgb(33, 37, 41);color: white;">
+                            <div class="team-member">
+                                <img class="mx-auto rounded-circle" src="assets/img/charles.jpg" alt="" />
+                                <h4 style="color: #FF931E">Charles Kithika</h4>
+                                <p class="section-subheading">Mentor, Product Manager at Microsoft</p>
+                                <p>I've always been passionate about helping startups who are crossing hurdles I crossed years ago and I have got the opportunity to do so here. I have learnt a lot and gathered inspiration from seeing young people step up passionately to immerse themselves in solving some of the continent's biggest challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>     
+          
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div id="original-contact" class="container">
+                <div class="text-center">
+                    <h3 class="section-heading">Join the mentor network</h3>
+                    <br/>
+                </div>
+                
+                <form class="text-center contactus" onsubmit="onDesktopSubmit()" name="second-submit-to-google-sheet">
+                    <div style="height: 100%;display: block;">
+                        <input type="text" name="FirstName" required placeholder="First name">
+                        <input type="text" name="LastName" required placeholder="Last name"><br/>
+                        <input type="text" name="PhoneNumber" placeholder="Phone Number">
+                        <input type="email" id="userEmail" name="EmailAddress" required placeholder="Email address"><br/>
+                        <input type="email" name="EmailAddress" id="firstEmail" placeholder="Company" required>
+                        <input type="email" name="EmailAddress" id="firstEmail" placeholder="Position" required>
+                        <br/>
+                        <label style="color: white;" for="cars">Select Your nationality: </label>
+                        <select name="cars" id="cars">
+                            <option value="kenya">Kenya</option>
+                            <option value="uganda">Uganda</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="japan">Japan</option>
+                        </select>
+                        <div style="display: flex;
+                        align-items: center;
+                        justify-content: center;">
+                            <button type="submit" class="button" ><b>Submit</b></button>&nbsp;&nbsp;
+                            <div id="desktop-loader" class="loader"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- modal -->
+            <div id="survey" name="survey" class="overlay">
+                <div class="popup">
+                    <div class="text-center">
+                        <h3 style="color: black;">Before you go...</h3>
+                        <p class="close" onclick="location.href = '#'">Close</p>
+                        <br/>
+                    </div>
+                    <div class="content">
+                        <form name="submit-survey-to-google-sheet">
+                            <p>Help us create a better platform for you by answering the following questions</p>
+                            <div style="height: 100%;display: block;">
+                                <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
+                                <p><b>Do you currently have a startup or idea?</b></p>
+                                    <div>
+                                        <input type="radio" id="startup-yes" name="HasStartup" value="idea">
+                                        <label for="startup-idea">I have an idea</label>
+                                    </div>
+                                  
+                                  <div>
+                                    <input type="radio" id="startup-no" name="HasStartup" value="startup">
+                                    <label for="startup-startup">I have a startup</label>
+                                  </div>
+
+                                  <div>
+                                    <input type="radio" id="startup-no" name="HasStartup" value="interested">
+                                    <label for="startup-interested">None, I'm just interested</label>
+                                  </div>
+
+                                <hr/>
+                                <p><b>Under what age group do you fall?</b></p>
+                                    <div>
+                                        <input type="radio" id="age20" name="AgeRange" value="20-25">
+                                        <label for="age20">20-25</label>
+                                    </div>
+                                  
+                                  <div>
+                                    <input type="radio" id="age26" name="AgeRange" value="26-30">
+                                    <label for="age26">26-30</label>
+                                  </div>
+
+                                  <div>
+                                    <input type="radio" id="age31" name="AgeRange" value="31-35">
+                                    <label for="age31">31-35</label>
+                                  </div>
+
+                                  <div>
+                                    <input type="radio" id="age36" name="AgeRange" value="36-40">
+                                    <label for="age36">36-40</label>
+                                  </div>
+
+                                  <br/>
+                                  <p><b>Other</b></p>
+                                  <textarea id="OtherAgeGroup" name="OtherAgeGroup"></textarea>
+                                  <hr/>
+                                <p><b>Whats your current employment status?</b></p>
+                                  <div>
+                                      <input type="radio" id="startup-yes" name="EmploymentStatus" value="Employed">
+                                      <label for="startup-idea">Employed</label>
+                                  </div>
+                                
+                                <div>
+                                  <input type="radio" id="startup-no" name="EmploymentStatus" value="Self-Employed">
+                                  <label for="startup-startup">Self-Employed</label>
+                                </div>
+
+                                <div>
+                                  <input type="radio" id="startup-no" name="EmploymentStatus" value="Currently not working">
+                                  <label for="startup-interested">Currently not working</label>
+                                </div>
+                                <br/>
+                                <p><b>Other</b></p>
+                                <textarea id="OtherEmploymentStatus" name="OtherEmploymentStatus"></textarea>
+                                <hr/>
+                              <hr/>
+
+                                
+                                <!-- add radio options here -->
+                                <p><b>On a scale of one to five, how much are you affected by each these challenges?</b></p>
+                                <table>
+                                    <tr class="rating">
+                                        <td></td>
+                                        <td><b>1</b></td>
+                                        <td><b>2</b></td>
+                                        <td><b>3</b></td>
+                                        <td><b>4</b></td>
+                                        <td><b>5</b></td>
+                                    </tr>
+                                    <tr >
+                                        <td class="rating-title">Not knowing what to do</td>
+                                        <td><input type="radio" name="KnowledgePriority" value="1"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="2"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="3"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="4"></td>
+                                        <td><input type="radio" name="KnowledgePriority" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of mentors</td>
+                                        <td><input type="radio" name="MentorsPriority" value="1"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="2"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="3"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
+                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of support</td>
+                                        <td><input type="radio" name="SupportPriority" value="1"></td>
+                                        <td><input type="radio" name="SupportPriority" value="2"></td>
+                                        <td><input type="radio" name="SupportPriority" value="3"></td>
+                                        <td><input type="radio" name="SupportPriority" value="4"></td>
+                                        <td><input type="radio" name="SupportPriority" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lack of funding</td>
+                                        <td><input type="radio" name="FundingPriority" value="1"></td>
+                                        <td><input type="radio" name="FundingPriority" value="2"></td>
+                                        <td><input type="radio" name="FundingPriority" value="3"></td>
+                                        <td><input type="radio" name="FundingPriority" value="4"></td>
+                                        <td><input type="radio" name="FundingPriority" value="5"></td>
+                                    </tr>
+                                </table>
+
+                                <br/>
+                                <p><b>Other</b></p>
+                                <textarea id="otherChallenges" name="OtherChallenges"></textarea>
+                                <hr/>
+                                <br/>
+                                <p><b>Would you use a platform that guides you through your entrepreneurship journey?</b></p>
+                                <div>
+                                    <input type="radio" id="platform-yes" name="WouldUsePlatform" value="yes">
+                                    <label for="platform-yes">Yes</label>
+                                </div>
+                              
+                              <div>
+                                <input type="radio" id="platform-no" name="WouldUsePlatform" value="no">
+                                <label for="platform-no">No</label>
+                              </div>
+                                <hr/>
+                                <p><b>What questions do you have for us?</b></p>
+                                <textarea id="questions" name="Questions"></textarea>
+                                <br/>
+                                <div id="wrapper">
+                                    <button style="background-color: #FF931E;border: none;"
+                                        onclick="loadingActivate()" 
+                                        type="submit"><b>Submit</b>
+                                    </button>&nbsp;&nbsp;
+                                    <div id="loading" class="loader"></div>
+                                </div>
+                                <br/>
+                                <div id="my_id" style="color: darkcyan;" >
+                                    <p>
+                                        <b>Submitted successfully! Thank you for your response!</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left"><b>Contact Us</b>:&nbsp;  <b>seplatform@impactafrica.network</b> </div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://twitter.com/SE_Platform"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.facebook.com/SEplatfrorm/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-right">
+                        <a>Powered by</a>
+                        <a href="https://www.impactafrica.network/" target="_blank"><img height="50px" src="assets/img/IAN_Logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzwS68o0Zax1DoE8IbupzzspeeU6Svl-ej1tQacBQEyIFSjcoz4Gq6R/exec'
+            const form = document.forms['submit-to-google-sheet']
+
+            function onHeroSubmit(){
+                document.getElementById('loader').style.display = 'block';
+            }
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response =>
+                {
+                    location.href = '#survey';
+                    document.getElementById('loader').style.display = 'none';
+                    console.log('Success!', response)
+                    var getValue = $('#firstEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        <script>
+            const secondForm = document.forms['second-submit-to-google-sheet']
+
+            function onDesktopSubmit(){
+                document.getElementById('desktop-loader').style.display = 'block';
+            }
+            secondForm.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(secondForm)})
+                .then(response => 
+                {
+                    location.href = '#survey'
+                    document.getElementById('desktop-loader').style.display = 'none';
+                    console.log('Success!', response)
+                    var getValue = $('#userEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        <script>
+            const thirdForm = document.forms['mobile-submit-to-google-sheet']
+
+            function onMobileSubmit(){
+                document.getElementById('mobile-loader').style.display = 'block';
+            }
+            
+            thirdForm.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(thirdForm)})
+                .then(response => 
+                {
+                    location.href = '#survey';
+                    document.getElementById('mobile-loader').style.display = 'none';
+                    console.log('Success!', response)
+                    var getValue = $('#mobileEmail').val();
+                    console.log("heres the value",getValue);
+                    $('#SurveyEmail').val(getValue);
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        <script>
+            const surveyScriptURL = 'https://script.google.com/macros/s/AKfycbyHsZtbF2ff2lj5jW0q6ye6JSmX7Nq8UvNlGDy8A3nEJYMyAP3ydeQF/exec'
+            const surveyForm = document.forms['submit-survey-to-google-sheet']
+
+            function sleep (time) {
+                return new Promise((resolve) => setTimeout(resolve, time));
+            }
+
+            function loadingActivate(){
+                document.getElementById('loading').style.display = "block";
+            }
+
+            surveyForm.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(surveyScriptURL, { method: 'POST', body: new FormData(surveyForm)})
+                .then(response => {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('my_id').style.display = 'block';
+                    console.log("heres before")
+                    sleep(700).then(() => {
+                        window.location.href="#";
+                        console.log('Success!', response)
+                    });
+                    })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+       </body>
+</html>
