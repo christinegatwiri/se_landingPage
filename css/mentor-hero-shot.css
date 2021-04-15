@@ -1,10 +1,10 @@
 /* mobile view heading */
 .mainheader{
-    padding-top: 19.5rem;
-    padding-bottom: 10rem;
+    padding-top: 18.5rem;
+    padding-bottom: 14rem;
     text-align: center;
     color: #fff;
-    background: linear-gradient(rgba(22, 22, 22, 0.8), rgba(20, 20, 20, 0.8)), url("../assets/img/mentor2.jpg");
+    background: linear-gradient(rgba(22, 22, 22, 0.8), rgba(20, 20, 20, 0.8)), url("../assets/img/mentor9.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -213,7 +213,7 @@ input[type=email]{
     @media (min-width: 768px) {
         header.mainheader {
         padding-top: 17.5rem;
-        padding-bottom: 16.9rem;
+        padding-bottom: 21.9rem;
         text-align: center;
         /* display: flex; */
     }

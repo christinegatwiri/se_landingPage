@@ -61,7 +61,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="height: 50px;" src="assets/img/logo.png" alt="" /></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="height: 60px;" src="assets/img/logo.png" alt="" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -92,40 +92,16 @@
                 </div>
                 <div>
                     <form class="ctaform desktop-content" name="submit-to-google-sheet" onsubmit="onHeroSubmit()">
-                        <h5 style="color:#FF931E;"><b>Join the mentor network</b></h5>
-                        <div>
-                            <div style="display: flex;flex-direction: row;">
-                                <input style="display: block;margin-right: 1%;" required type="text" name="FirstName" placeholder="First Name">
-                                <input style="display: block;" type="text" required name="LastName" placeholder="Last Name">
-                            </div>
-                            <input style="width: 100%;" type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Email address" required>
-                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Company" required>
-                            <input type="email" name="EmailAddress" id="firstEmail" placeholder="Position" required>
-                            <label for="cars">Select Your nationality: </label>
-                            <select name="cars" id="cars">
-                                <option value="kenya">Kenya</option>
-                                <option value="uganda">Uganda</option>
-                                <option value="nigeria">Nigeria</option>
-                                <option value="japan">Japan</option>
-                            </select>
-                            <div style="display: flex;">
-                                <button type="submit"><b>Submit</b></button>&nbsp;
-                                <div id="loader" class="first-loader"></div>
+                            <div style="padding-top: 90px;">
+                                <button style="height: 50px;" type="submit"><b>Join the mentor network</b></button>&nbsp;
                             </div>
                         </div>
                     </form>
 
                     <form class="ctaform mobile-content" onsubmit="onMobileSubmit()" name="mobile-submit-to-google-sheet">
-                        <h5 style="color:#FF931E;padding-top: 20px;"><b>Join the wait list</b></h5>
                         <div>
-                            <input type="text" name="FirstName" required placeholder="First Name">
-                            <input type="text" name="LastName" required placeholder="Last Name">
-                            <input type="text" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="mobileEmail" required placeholder="Email address">
-                            <div class="mobile-wrapper">
-                                <button type="submit"><b>Submit</b></button>&nbsp;
-                                <div id="mobile-loader" class="loader"></div>
+                            <div>
+                                <button type="submit"><b>Join the Network</b></button>&nbsp;
                             </div>
                         </div>
                     </form>          
@@ -134,10 +110,68 @@
         </header>
         <!-- About-->
         <!-- benefits/what you'll get -->
-            
+        <section class="page-section" id="portfolio" style="margin-bottom: -20px;">
+            <div>
+                <div class="text-center">
+                    <h2  class="section-heading">Help shape tomorrow</h2>
+                    <p class="section-subheading">Become a mentor and help shape the next generation of aspiring entrepreneurs and businesses. </p>
+                </div>
+                <div class="row" style="padding:20px">
+                  <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
+                            <br/>
+                            <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/seminar.jpg" alt="" />
+                            <br/>
+                            <br/>
+                            <h4 class="my-3">Inspire entrepreneurs</h4>
+                            <br/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
+                                <br/>
+                                <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/knowledge2.jpg" alt="" />
+                                <br/>
+                                  <br/>
+                                <h4 class="my-3">Pass knowledge</h4>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
+                                <br/>
+                                <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/knowledge.png" alt="" />
+                                <br/>
+                                <br/>
+                                <h4 class="my-3">Help grow the ecosystem</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <div style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
+                                <br/>
+                                <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/impact.png" alt="" />
+                                <br/>
+                                <br/>
+                                <h4 class="my-3">Make Impact</h4>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
            
 <!-- benefits/what you'll get -->
-<section class="page-section" id="portfolio" style="margin-top: -110px;background-image: linear-gradient(white,#f2f2f2);" >
+<section class="page-section" id="portfolio" style="margin-top: -70px;background-image: linear-gradient(white,#f2f2f2);" >
     <div class="text-center">
         <h2  class="section-heading">Types of mentorship</h2>
         <p class="section-subheading text-muted">Here are some ways you can help mentor the entrepreneurs </p>
@@ -208,70 +242,12 @@
         </div>
     </div>  
 </div> 
-<section class="page-section" id="portfolio" style="margin-bottom: -70px;">
-    <div>
-        <div class="text-center">
-            <h2  class="section-heading">Help shape tomorrow</h2>
-            <p class="section-subheading">Become a mentor and help shape the next generation of aspiring entrepreneurs and businesses. </p>
-        </div>
-        <div class="row" style="padding:20px">
-          <div class="col-md-4 col-sm-6 mb-4">
-            <div class="portfolio-item">
-                <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
-                    <br/>
-                    <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/seminar.jpg" alt="" />
-                    <br/>
-                    <br/>
-                    <h4 class="my-3">Inspire entrepreneurs</h4>
-                    <br/>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
-                        <br/>
-                        <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/knowledge2.jpg" alt="" />
-                        <br/>
-                          <br/>
-                        <h4 class="my-3">Pass knowledge</h4>
-                        <br/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
-                        <br/>
-                        <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/knowledge.png" alt="" />
-                        <br/>
-                        <br/>
-                        <h4 class="my-3">Help grow the ecosystem</h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <div style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;" class="portfolio-caption">
-                        <br/>
-                        <img class="img-fluid" style="height: 180px;" src="assets/img/benefits/impact.png" alt="" />
-                        <br/>
-                        <br/>
-                        <h4 class="my-3">Make Impact</h4>
-                        <br/>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>          
+          
 </section>  
         <!--testimonials -->
         <!-- benefits/what you'll get -->
          <!-- Testimonial-->
-        <section class="page-section bg-light" id="team" >
+        <section class="page-section bg-light" style="margin-top: -70px;" id="team" >
             <div class="">
                 <div class="text-center">
                     <h2 class="section-heading">Testimonials</h2>
@@ -311,212 +287,21 @@
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div id="original-contact" class="container">
-                <div class="text-center">
-                    <h3 class="section-heading">Join the mentor network</h3>
-                    <br/>
-                </div>
-                
-                <form class="text-center contactus" onsubmit="onDesktopSubmit()" name="second-submit-to-google-sheet">
-                    <div style="height: 100%;display: block;">
-                        <input type="text" name="FirstName" required placeholder="First name">
-                        <input type="text" name="LastName" required placeholder="Last name"><br/>
-                        <input type="text" name="PhoneNumber" placeholder="Phone Number">
-                        <input type="email" id="userEmail" name="EmailAddress" required placeholder="Email address"><br/>
-                        <input type="email" name="EmailAddress" id="firstEmail" placeholder="Company" required>
-                        <input type="email" name="EmailAddress" id="firstEmail" placeholder="Position" required>
-                        <br/>
-                        <label style="color: white;" for="cars">Select Your nationality: </label>
-                        <select name="cars" id="cars">
-                            <option value="kenya">Kenya</option>
-                            <option value="uganda">Uganda</option>
-                            <option value="nigeria">Nigeria</option>
-                            <option value="japan">Japan</option>
-                        </select>
-                        <br/>
-                        <label style="color: white;" for="cars">Area of mentorship: </label>
-                        <select name="cars" id="cars">
-                            <option value="kenya">Ideation</option>
-                            <option value="uganda">Market Research</option>
-                            <option value="nigeria">MVP Development</option>
-                            <option value="japan">Customer Value Proposition</option>
-                        </select>
-                        <br/>
-                        <input type="email" name="EmailAddress" id="firstEmail" placeholder="Other Area" required>
                         <div style="display: flex;
                         align-items: center;
                         justify-content: center;">
-                            <button type="submit" class="button" ><b>Submit</b></button>&nbsp;&nbsp;
+                            <button type="submit" class="button" ><b>Join the Mentor Network</b></button>&nbsp;&nbsp;
                             <div id="desktop-loader" class="loader"></div>
                         </div>
                     </div>
                 </form>
-            </div>
-
-            <!-- modal -->
-            <div id="survey" name="survey" class="overlay">
-                <div class="popup">
-                    <div class="text-center">
-                        <h3 style="color: black;">Before you go...</h3>
-                        <p class="close" onclick="location.href = '#'">Close</p>
-                        <br/>
-                    </div>
-                    <div class="content">
-                        <form name="submit-survey-to-google-sheet">
-                            <p>Help us create a better platform for you by answering the following questions</p>
-                            <div style="height: 100%;display: block;">
-                                <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
-                                <p><b>Do you currently have a startup or idea?</b></p>
-                                    <div>
-                                        <input type="radio" id="startup-yes" name="HasStartup" value="idea">
-                                        <label for="startup-idea">I have an idea</label>
-                                    </div>
-                                  
-                                  <div>
-                                    <input type="radio" id="startup-no" name="HasStartup" value="startup">
-                                    <label for="startup-startup">I have a startup</label>
-                                  </div>
-
-                                  <div>
-                                    <input type="radio" id="startup-no" name="HasStartup" value="interested">
-                                    <label for="startup-interested">None, I'm just interested</label>
-                                  </div>
-
-                                <hr/>
-                                <p><b>Under what age group do you fall?</b></p>
-                                    <div>
-                                        <input type="radio" id="age20" name="AgeRange" value="20-25">
-                                        <label for="age20">20-25</label>
-                                    </div>
-                                  
-                                  <div>
-                                    <input type="radio" id="age26" name="AgeRange" value="26-30">
-                                    <label for="age26">26-30</label>
-                                  </div>
-
-                                  <div>
-                                    <input type="radio" id="age31" name="AgeRange" value="31-35">
-                                    <label for="age31">31-35</label>
-                                  </div>
-
-                                  <div>
-                                    <input type="radio" id="age36" name="AgeRange" value="36-40">
-                                    <label for="age36">36-40</label>
-                                  </div>
-
-                                  <br/>
-                                  <p><b>Other</b></p>
-                                  <textarea id="OtherAgeGroup" name="OtherAgeGroup"></textarea>
-                                  <hr/>
-                                <p><b>Whats your current employment status?</b></p>
-                                  <div>
-                                      <input type="radio" id="startup-yes" name="EmploymentStatus" value="Employed">
-                                      <label for="startup-idea">Employed</label>
-                                  </div>
-                                
-                                <div>
-                                  <input type="radio" id="startup-no" name="EmploymentStatus" value="Self-Employed">
-                                  <label for="startup-startup">Self-Employed</label>
-                                </div>
-
-                                <div>
-                                  <input type="radio" id="startup-no" name="EmploymentStatus" value="Currently not working">
-                                  <label for="startup-interested">Currently not working</label>
-                                </div>
-                                <br/>
-                                <p><b>Other</b></p>
-                                <textarea id="OtherEmploymentStatus" name="OtherEmploymentStatus"></textarea>
-                                <hr/>
-                              <hr/>
-
-                                
-                                <!-- add radio options here -->
-                                <p><b>On a scale of one to five, how much are you affected by each these challenges?</b></p>
-                                <table>
-                                    <tr class="rating">
-                                        <td></td>
-                                        <td><b>1</b></td>
-                                        <td><b>2</b></td>
-                                        <td><b>3</b></td>
-                                        <td><b>4</b></td>
-                                        <td><b>5</b></td>
-                                    </tr>
-                                    <tr >
-                                        <td class="rating-title">Not knowing what to do</td>
-                                        <td><input type="radio" name="KnowledgePriority" value="1"></td>
-                                        <td><input type="radio" name="KnowledgePriority" value="2"></td>
-                                        <td><input type="radio" name="KnowledgePriority" value="3"></td>
-                                        <td><input type="radio" name="KnowledgePriority" value="4"></td>
-                                        <td><input type="radio" name="KnowledgePriority" value="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lack of mentors</td>
-                                        <td><input type="radio" name="MentorsPriority" value="1"></td>
-                                        <td><input type="radio" name="MentorsPriority" value="2"></td>
-                                        <td><input type="radio" name="MentorsPriority" value="3"></td>
-                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
-                                        <td><input type="radio" name="MentorsPriority" value="4"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lack of support</td>
-                                        <td><input type="radio" name="SupportPriority" value="1"></td>
-                                        <td><input type="radio" name="SupportPriority" value="2"></td>
-                                        <td><input type="radio" name="SupportPriority" value="3"></td>
-                                        <td><input type="radio" name="SupportPriority" value="4"></td>
-                                        <td><input type="radio" name="SupportPriority" value="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lack of funding</td>
-                                        <td><input type="radio" name="FundingPriority" value="1"></td>
-                                        <td><input type="radio" name="FundingPriority" value="2"></td>
-                                        <td><input type="radio" name="FundingPriority" value="3"></td>
-                                        <td><input type="radio" name="FundingPriority" value="4"></td>
-                                        <td><input type="radio" name="FundingPriority" value="5"></td>
-                                    </tr>
-                                </table>
-
-                                <br/>
-                                <p><b>Other</b></p>
-                                <textarea id="otherChallenges" name="OtherChallenges"></textarea>
-                                <hr/>
-                                <br/>
-                                <p><b>Would you use a platform that guides you through your entrepreneurship journey?</b></p>
-                                <div>
-                                    <input type="radio" id="platform-yes" name="WouldUsePlatform" value="yes">
-                                    <label for="platform-yes">Yes</label>
-                                </div>
-                              
-                              <div>
-                                <input type="radio" id="platform-no" name="WouldUsePlatform" value="no">
-                                <label for="platform-no">No</label>
-                              </div>
-                                <hr/>
-                                <p><b>What questions do you have for us?</b></p>
-                                <textarea id="questions" name="Questions"></textarea>
-                                <br/>
-                                <div id="wrapper">
-                                    <button style="background-color: #FF931E;border: none;"
-                                        onclick="loadingActivate()" 
-                                        type="submit"><b>Submit</b>
-                                    </button>&nbsp;&nbsp;
-                                    <div id="loading" class="loader"></div>
-                                </div>
-                                <br/>
-                                <div id="my_id" style="color: darkcyan;" >
-                                    <p>
-                                        <b>Submitted successfully! Thank you for your response!</b>
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            </div>            
         </section>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left"><b>Contact Us</b>:&nbsp;  <b>seplatform@impactafrica.network</b> </div>
+                    <div class="col-lg-4 text-lg-left"><b>Contact us</b>:&nbsp;  <b>mercy@seplatform.co</b> </div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://twitter.com/SE_Platform"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.facebook.com/SEplatfrorm/"><i class="fab fa-facebook-f"></i></a>
