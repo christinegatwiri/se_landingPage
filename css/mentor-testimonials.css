@@ -1,0 +1,68 @@
+/* Float four columns side by side */
+.testimonialcolumn {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.testimonialrow {margin: 0 0;}
+
+/* Clear floats after the columns */
+.testimonialrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.testimonialpic img {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 20px;
+  border: 0.5rem solid #cccccc;
+}
+.main-testimonial{
+  display: flex;
+  margin: auto;
+  width: 95%;
+}
+
+.card-holder{
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  width:50%
+}
+.team-member img {
+  width: 21rem;
+  height: 21rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .testimonialcolumn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    padding-top: 80px;
+  }
+  .card-holder{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    width:100%
+  }
+  .main-testimonial{
+    display: block;
+    margin: auto;
+    width: 95%;
+  }
+}
+
+/* Style the counter cards */
+.testimonialcard {
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
