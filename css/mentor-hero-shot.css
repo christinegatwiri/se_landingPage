@@ -1,0 +1,240 @@
+/* mobile view heading */
+.mainheader{
+    padding-top: 18.5rem;
+    padding-bottom: 14rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(22, 22, 22, 0.8), rgba(20, 20, 20, 0.8)), url("../assets/img/mentor9.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.mainheading{
+    text-align: left;
+    width: 60%;
+    float: left;    
+}
+/* loadinggg */
+.first-loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #e47a08;
+    width: 25px;
+    margin-top: 5px;
+    height: 25px;
+    display: none;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.ctaform{
+    text-align: center;
+    padding-left: 75%;
+    margin-left: auto;
+    margin-right: 0;
+}
+.desktop-content {display: block;}
+.mobile-content {display: none;}
+.mobile-content-heading {
+    display: none;
+}
+
+input[type=text] {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 49%;
+    margin-top: 5px;
+}
+
+input[type=email]{
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+}
+.mobile-wrapper{
+    display: flex;
+    text-align:center;
+}
+.ctaform button{
+    margin-top: 5px;
+    padding-top: 80px;
+    width: 98%;
+    border-radius: 5px;
+    background-color: #FF931E;
+    border: none;
+    padding: 6px;
+}
+
+.survey{
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+#new-survey{
+    display: none;
+}
+
+.contactus input[type=text]{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 25%;
+    margin-top: 5px;
+}
+
+.contactus input[type=email]{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 25%;
+    margin-top: 5px;
+}
+
+.contactus input[type=button]{
+    margin-top: 5px;
+    padding-top: 80px;
+    width: 25%;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .mainheading {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 20px;
+        padding:5px;
+    }
+    /* display different content for mobile */
+    .desktop-content {display: none;}
+    .mobile-content {
+        display: block;
+        padding-bottom: 10px;
+    }
+    .mobile-content-heading {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .mainheading h2{
+        font-size: x-large;
+    }
+    .mainheading p{
+        font-size:large
+    }
+
+    .ctaform{
+        text-align: center;
+        padding-left: 5px;
+    }
+
+    .ctaform input[type=text]{
+        width: 80%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .ctaform input[type=email]{
+        margin-top: 5px;
+        padding-top: 80px;
+        width: 80%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    .ctaform button{
+        margin-top: 5px;
+        padding-top: 80px;
+        margin-left: 40px;
+        width: 80%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .contactus{
+        padding:15px;
+    }
+    .survey{
+        box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #f1f1f1;
+    }
+    
+    .contactus input[type=text]{
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .contactus input[type=email]{
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .contactus button{
+        margin-top: 5px;
+        padding-top: 80px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    }
+
+
+    @media (min-width: 768px) {
+        header.mainheader {
+        padding-top: 17.5rem;
+        padding-bottom: 21.9rem;
+        text-align: center;
+        /* display: flex; */
+    }
+
+    header.mainheader .mainheader-leftside {
+        float: left;
+    }
+
+    header.mainheader .mainheader-rightside {
+        float: right;
+    }
+
+    header.mainheader .mainheader-subheading {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+        margin-bottom: 2rem;
+    }
+    header.mainheader .mainheader-heading {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        margin-bottom: 4rem;
+    }
+    }
