@@ -117,14 +117,17 @@
                         </div>
                     </form>
 
-                    <form class="ctaform mobile-content" id="mobile-form">
+                    <form class="ctaform mobile-content" onsubmit="mobileSubmit()" id="mobile-form">
                         <h5 style="color:#FF931E;padding-top: 20px;"><b>Join the wait list</b></h5>
                         <div>
                             <input type="text" name="FirstName" id="FirstName_" required placeholder="First Name">
                             <input type="text" name="LastName" id="LastName_" required placeholder="Last Name">
                             <input type="text" name="PhoneNumber" id="PhoneNumber_" placeholder="Phone Number">
                             <input type="email" name="EmailAddress" id="EmailAddress_" required placeholder="Email address">
-                            <button type="submit"><b>Submit</b></button>&nbsp;
+                            <div class="mobile-wrapper">
+                                <button type="submit"><b>Submit</b></button>&nbsp;
+                                <div id="mobile-loader" class="loader"></div>
+                            </div>
                             </div>
                         </div>
                     </form>          
@@ -666,7 +669,10 @@
                 'Authorization': 'Bearer keyXKQV5un7HrZTbW',
                 'Content-Type': 'application/json'
             };
-
+            function mobileSubmit()
+            {
+                document.getElementById('mobile-loader').style.display = 'block';
+            }
             // When the form is submitted...
             thisform.addEventListener("submit", function(event) {
             event.preventDefault();
@@ -684,6 +690,7 @@
             )
             .then((resp) => {
                 location.href = '#survey';
+                document.getElementById('mobile-loader').style.display = 'none';
                 var getValue = $('#EmailAddress_').val();
                 console.log("heres the value",getValue);
                 $('#SurveyEmail').val(getValue);
