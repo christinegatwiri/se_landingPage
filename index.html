@@ -100,37 +100,12 @@
                     </p>
                     <h5 class="second-tagline" style="color:#FF931E;"><b>Avoid Unnecessary Mistakes</b></h5>
                 </div>
-                <div>
-                     <form class="ctaform desktop-content" onsubmit="onHeroButtonSubmit()" id="top-form">
-                        <h5 style="color:#FF931E;"><b>Join the wait list</b></h5>
-                        <div>
-                            <div style="display: flex;flex-direction: row;">
-                                <input style="display: block;margin-right: 1%;" required type="text" id="First_Name" name="FirstName" placeholder="First Name">
-                                <input style="display: block;" type="text" required name="LastName" id="Last_Name" placeholder="Last Name">
-                            </div>
-                            <input style="width: 100%;" type="text" id="Phone_Number" name="PhoneNumber" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="Email_Address" placeholder="Email address" required>
-                            <div style="display: flex;">
-                                <button type="submit"><b>Submit</b></button>&nbsp;
-                                <div id="first_loader" class="first-loader"></div>
-                            </div>
-                        </div>
-                    </form>
-
-                    <form class="ctaform mobile-content" onsubmit="mobileSubmit()" id="mobile-form">
-                        <h5 style="color:#FF931E;padding-top: 20px;"><b>Join the wait list</b></h5>
-                        <div>
-                            <input type="text" name="FirstName" id="FirstName_" required placeholder="First Name">
-                            <input type="text" name="LastName" id="LastName_" required placeholder="Last Name">
-                            <input type="text" name="PhoneNumber" id="PhoneNumber_" placeholder="Phone Number">
-                            <input type="email" name="EmailAddress" id="EmailAddress_" required placeholder="Email address">
-                            <div class="mobile-wrapper">
-                                <button type="submit"><b>Submit</b></button>&nbsp;
-                                <div id="mobile-loader" class="loader"></div>
-                            </div>
-                            </div>
-                        </div>
-                    </form>          
+                <div style="padding-top: 30px;">
+                    <button style="background-color: #FF931E;border: none;" class="nav-item btn ">
+                        <a href="https://live.seplatform.co" target="_blank" class="nav-link js-scroll-trigger" style="color: black;">
+                            <b>Join SE today!</b>
+                        </a>
+                    </button>                            
                 </div>
             </div>
         </header>
@@ -387,177 +362,24 @@
         <section class="page-section" id="contact">
             <div id="original-contact" class="container">
                 <div class="text-center">
-                    <h3 class="section-heading">Join the wait list</h3>
+                    <h3 class="section-heading">Want to get started?</h3>
                     <br/>
                 </div>
                 
-                <form class="text-center contactus" onsubmit="onButtonSubmit()" action="#0" id="subscriber-form">
                     <div style="height: 100%;display: block;">
-                        <input type="text" id="FirstName" name="FirstName" required placeholder="First name">
-                        <input type="text" id="LastName" name="LastName" required placeholder="Last name"><br/>
-                        <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
-                        <input type="email" id="EmailAddress" name="EmailAddress" required placeholder="Email address"><br/>
                         <div style="display: flex;align-items: center;justify-content: center;">
-                            <button type="submit" class="button"><b>Submit</b></button>&nbsp;&nbsp;
+                            <button type="submit" class="button">
+                                <a href="https://live.seplatform.co" target="_blank" class="nav-link js-scroll-trigger" style="color: black;">
+                                    <b>Join SE today!</b>
+                                </a>
+                            </button>&nbsp;&nbsp;
                             <div id="desktop-loader" class="loader"></div>
                         </div>
                     </div>
                 </form>
             </div>
 
-            <!-- modal -->
-            <div id="survey" name="survey" class="overlay">
-                <div class="popup">
-                    <div class="text-center">
-                        <h3 style="color: black;">Before you go...</h3>
-                        <p class="close" onclick="location.href = '#'">Close</p>
-                        <br/>
-                    </div>
-                    <div class="content">
-                        <form onsubmit="loadingActivate()"  action="#0" id="survey-form">
-                            <p>Help us create a better platform for you by answering the following questions</p>
-                            <div style="height: 100%;display: block;">
-                                <input id="SurveyEmail" name="EmailAddress" value="hi" type="hidden">
-                                <p><b>Do you currently have a startup or idea?</b></p>
-                                    <div>
-                                        <input type="radio" id="HasStartup" name="HasStartup" value="idea">
-                                        <label for="startup-idea">I have an idea</label>
-                                    </div>
-                                  
-                                  <div>
-                                    <input type="radio" id="HasStartup" name="HasStartup" value="startup">
-                                    <label for="startup-startup">I have a startup</label>
-                                  </div>
-
-                                  <div>
-                                    <input type="radio" id="HasStartup" name="HasStartup" value="interested">
-                                    <label for="startup-interested">None, I'm just interested</label>
-                                  </div>
-
-                                <hr/>
-                                <p><b>Under what age group do you fall?</b></p>
-                                    <div>
-                                        <input type="radio" id="AgeRange" name="AgeRange" value="20-25">
-                                        <label for="age20">20-25</label>
-                                    </div>
-                                  
-                                  <div>
-                                    <input type="radio" id="AgeRange" name="AgeRange" value="26-30">
-                                    <label for="age26">26-30</label>
-                                  </div>
-
-                                  <div>
-                                    <input type="radio" id="AgeRange" name="AgeRange" value="31-35">
-                                    <label for="age31">31-35</label>
-                                  </div>
-
-                                  <div>
-                                    <input type="radio" id="AgeRange" name="AgeRange" value="36-40">
-                                    <label for="age36">36-40</label>
-                                  </div>
-
-                                  <br/>
-                                  <p><b>Other</b></p>
-                                  <textarea id="OtherAgeGroup" name="OtherAgeGroup"></textarea>
-                                  <hr/>
-
-                                <p><b>What's your current employment status?</b></p>
-                                <div>
-                                    <input type="radio" id="EmploymentStatus" name="EmploymentStatus" value="Self-Employed">
-                                    <label for="startup-startup">Self-Employed</label>
-                                  </div>
-                                  <div>
-                                      <input type="radio" id="EmploymentStatus" name="EmploymentStatus" value="Employed">
-                                      <label for="startup-idea">Employed</label>
-                                  </div>
-                                <div>
-                                  <input type="radio" id="EmploymentStatus" name="EmploymentStatus" value="Currently not working">
-                                  <label for="startup-interested">Currently not working</label>
-                                </div>
-                                <br/>
-                                <hr/>
-
-                                <!-- add radio options here -->
-                                <p><b>On a scale of one to five, how much are you affected by each these challenges?</b></p>
-                                <table>
-                                    <tr class="rating">
-                                        <td></td>
-                                        <td><b>1</b></td>
-                                        <td><b>2</b></td>
-                                        <td><b>3</b></td>
-                                        <td><b>4</b></td>
-                                        <td><b>5</b></td>
-                                    </tr>
-                                    <tr >
-                                        <td class="rating-title">Not knowing what to do</td>
-                                        <td><input type="radio" name="KnowledgePriority" id="KnowledgePriority" value="1"></td>
-                                        <td><input type="radio" name="KnowledgePriority" id="KnowledgePriority" value="2"></td>
-                                        <td><input type="radio" name="KnowledgePriority" id="KnowledgePriority" value="3"></td>
-                                        <td><input type="radio" name="KnowledgePriority" id="KnowledgePriority" value="4"></td>
-                                        <td><input type="radio" name="KnowledgePriority" id="KnowledgePriority" value="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lack of mentors</td>
-                                        <td><input type="radio" name="MentorsPriority" id="MentorsPriority" value="1"></td>
-                                        <td><input type="radio" name="MentorsPriority" id="MentorsPriority" value="2"></td>
-                                        <td><input type="radio" name="MentorsPriority" id="MentorsPriority" value="3"></td>
-                                        <td><input type="radio" name="MentorsPriority" id="MentorsPriority" value="4"></td>
-                                        <td><input type="radio" name="MentorsPriority" id="MentorsPriority" value="4"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lack of support</td>
-                                        <td><input type="radio" name="SupportPriority" id="SupportPriority" value="1"></td>
-                                        <td><input type="radio" name="SupportPriority" id="SupportPriority" value="2"></td>
-                                        <td><input type="radio" name="SupportPriority" id="SupportPriority" value="3"></td>
-                                        <td><input type="radio" name="SupportPriority" id="SupportPriority" value="4"></td>
-                                        <td><input type="radio" name="SupportPriority" id="SupportPriority" value="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lack of funding</td>
-                                        <td><input type="radio" name="FundingPriority" id="FundingPriority" value="1"></td>
-                                        <td><input type="radio" name="FundingPriority" id="FundingPriority" value="2"></td>
-                                        <td><input type="radio" name="FundingPriority" id="FundingPriority" value="3"></td>
-                                        <td><input type="radio" name="FundingPriority" id="FundingPriority" value="4"></td>
-                                        <td><input type="radio" name="FundingPriority" id="FundingPriority" value="5"></td>
-                                    </tr>
-                                </table>
-
-                                <br/>
-                                <p><b>Other</b></p>
-                                <textarea id="OtherChallenges" name="OtherChallenges"></textarea>
-                                <hr/>
-                                <br/>
-                                <p><b>Would you use a platform that guides you through your entrepreneurship journey?</b></p>
-                                <div>
-                                    <input type="radio" id="WouldUsePlatform" name="WouldUsePlatform" value="yes">
-                                    <label for="platform-yes">Yes</label>
-                                </div>
-                              
-                              <div>
-                                <input type="radio" id="WouldUsePlatform" name="WouldUsePlatform" value="no">
-                                <label for="platform-no">No</label>
-                              </div>
-                                <hr/>
-                                <p><b>What questions do you have for us?</b></p>
-                                <textarea id="Questions" name="Questions"></textarea>
-                                <br/>
-                                <div id="wrapper">
-                                    <button style="background-color: #FF931E;border: none;"type="submit"><b>Submit</b>
-                                    </button>&nbsp;&nbsp;
-                                    <div id="survey_loading" class="loader"></div>
-                                </div>
-                                <br/>
-                                <div id="my_id" style="color: darkcyan;" >
-                                    <p>
-                                        <b>Submitted successfully! Thank you for your response!</b>
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
         </section>
         <!-- Footer-->
         <footer class="footer py-4">
@@ -586,164 +408,10 @@
         <script src="assets/mail/jqBootstrapValidation.js"></script>
         <script src="assets/mail/contact_me.js"></script>
 
-        <script>
-            var myform = document.getElementById("subscriber-form");
+        
 
-            function onButtonSubmit()
-            {
-                document.getElementById('desktop-loader').style.display = 'block';
-            }
-            const headers = {
-                'Authorization': 'Bearer keyXKQV5un7HrZTbW',
-                'Content-Type': 'application/json'
-            };
 
-            // When the form is submitted...
-            myform.addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            console.log("heres the value",document.getElementById("FirstName").value)
-            // POST the data
-            axios.post("https://api.airtable.com/v0/appIPErHVk2Vayth4/Wait%20List",
-                {
-                    "fields": {
-                        "First Name": document.getElementById("FirstName").value,
-                        "Second Name": document.getElementById("LastName").value,
-                        "Phone Number": document.getElementById("PhoneNumber").value,
-                        "Email Address": document.getElementById("EmailAddress").value
-                    }
-                }, {headers: headers})
-            .then((resp) => {
-                location.href = '#survey';
-                var getValue = $('#EmailAddress').val();
-                console.log("heres the value",getValue);
-                $('#SurveyEmail').val(getValue);
-                document.getElementById('desktop-loader').style.display = 'none';
-                document.getElementById("subscriber-form").reset();
-            }
-                
-            );
-            });
-        </script>
-
-        <script>
-            var thisform = document.getElementById("top-form");
-
-            const headers_ = {
-                'Authorization': 'Bearer keyXKQV5un7HrZTbW',
-                'Content-Type': 'application/json'
-            };
-
-            function onHeroButtonSubmit()
-            {
-                document.getElementById('first_loader').style.display = 'block';
-            }
-            // When the form is submitted...
-            thisform.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            // POST the data
-            axios.post("https://api.airtable.com/v0/appIPErHVk2Vayth4/Wait%20List",
-                {
-                    "fields": {
-                        "First Name": document.getElementById("First_Name").value,
-                        "Second Name": document.getElementById("Last_Name").value,
-                        "Phone Number": document.getElementById("Phone_Number").value,
-                        "Email Address": document.getElementById("Email_Address").value
-                    }
-                }, {headers: headers_}
-            )
-            .then((resp) => {
-                location.href = '#survey';
-                var getValue = $('#Email_Address').val();
-                console.log("heres the value",getValue);
-                $('#SurveyEmail').val(getValue);
-                document.getElementById('first_loader').style.display = 'none';
-                document.getElementById("top-form").reset();
-            });
-            });
-        </script>
-
-        <script>
-            var thisform = document.getElementById("mobile-form");
-
-            const headers__ = {
-                'Authorization': 'Bearer keyXKQV5un7HrZTbW',
-                'Content-Type': 'application/json'
-            };
-            function mobileSubmit()
-            {
-                document.getElementById('mobile-loader').style.display = 'block';
-            }
-            // When the form is submitted...
-            thisform.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            // POST the data
-            axios.post("https://api.airtable.com/v0/appIPErHVk2Vayth4/Wait%20List",
-                {
-                    "fields": {
-                        "First Name": document.getElementById("FirstName_").value,
-                        "Second Name": document.getElementById("LastName_").value,
-                        "Phone Number": document.getElementById("PhoneNumber_").value,
-                        "Email Address": document.getElementById("EmailAddress_").value
-                    }
-                }, {headers: headers__}
-            )
-            .then((resp) => {
-                location.href = '#survey';
-                document.getElementById('mobile-loader').style.display = 'none';
-                var getValue = $('#EmailAddress_').val();
-                console.log("heres the value",getValue);
-                $('#SurveyEmail').val(getValue);
-                document.getElementById("mobile-form").reset();
-            });
-            });
-        </script>
-        <script>
-            var surveyform = document.getElementById("survey-form");
-
-            const headers___ = {
-                'Authorization': 'Bearer keyXKQV5un7HrZTbW',
-                'Content-Type': 'application/json'
-            };
-
-            function loadingActivate(){
-                document.getElementById('survey_loading').style.display = "block";
-            }
-            // When the form is submitted...
-            surveyform.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            // POST the data
-            axios.post("https://api.airtable.com/v0/appIPErHVk2Vayth4/Survey%20Responses",
-                {
-                    "fields": {
-                        "EmailAddress": document.getElementById("SurveyEmail").value,
-                        "HasStartup": document.querySelector('input[name="HasStartup"]:checked').value,
-                        "AgeRange": document.querySelector('input[name="AgeRange"]:checked').value,
-                        "OtherAgeGroup": document.getElementById("OtherAgeGroup").value,
-                        "EmploymentStatus": document.querySelector('input[name="EmploymentStatus"]:checked').value,
-                        "KnowledgePriority": document.querySelector('input[name="KnowledgePriority"]:checked').value,
-                        "MentorsPriority": document.querySelector('input[name="MentorsPriority"]:checked').value,
-                        "SupportPriority": document.querySelector('input[name="SupportPriority"]:checked').value,
-                        "FundingPriority": document.querySelector('input[name="FundingPriority"]:checked').value,
-                        "OtherChallenges": document.getElementById("OtherChallenges").value,
-                        "WouldUsePlatform": document.querySelector('input[name="WouldUsePlatform"]:checked').value,
-                        "Questions": document.getElementById("Questions").value
-                    }
-                }, {headers: headers___}
-            )
-            .then((resp) => {
-                document.getElementById('survey_loading').style.display = 'none';
-                document.getElementById('my_id').style.display = 'block';
-                setTimeout(function(){ 
-                    window.location.href="#";
-                    console.log('Success!', resp)
-                }, 800);  
-            });
-            });
-        </script>
+        
         
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
